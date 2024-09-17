@@ -12,26 +12,26 @@ const Home = () => {
 
       // Array of university items
   const universities = [
-    { name: 'Amity University Online', courses: '50 Courses', link: '/collegeDetail', logo: 'assets/img/u1.jpeg' },
-    { name: 'Manipal University Online', courses: '35 Courses', link: '/collegeDetail', logo: 'assets/img/u2.jpeg' },
-    { name: 'Jain University Online', courses: '40 Courses', link: '/collegeDetail', logo: 'assets/img/u3.jpeg' },
-    { name: 'Dy Patil University Online', courses: '45 Courses', link: '/collegeDetail', logo: 'assets/img/u4.png' },
-    { name: 'Amrita University Online', courses: '25 Courses', link: '/collegeDetail', logo: 'assets/img/u5.jpeg' },
-    { name: 'Liverpool John Moores University Online', courses: '30 Courses', link: '/collegeDetail', logo: 'assets/img/u6.jpeg' },
-    { name: 'Golden Gate University Online', courses: '20 Courses', link: '/collegeDetail', logo: 'assets/img/u7.jpeg' },
-    { name: 'NMIMS University Online', courses: '50 Courses', link: '/collegeDetail', logo: 'assets/img/u8.png' },
-    { name: 'Sanskriti University Online', courses: '35 Courses', link: '/collegeDetail', logo: 'assets/img/u9.png' },
-    { name: 'LPU University Online', courses: '40 Courses', link: '/collegeDetail', logo: 'assets/img/u10.jpeg' },
-    { name: 'Deakin Business School Online', courses: '45 Courses', link: '/collegeDetail', logo: 'assets/img/u11.jpeg' },
-    { name: 'UPES University Online', courses: '25 Courses', link: '/collegeDetail', logo: 'assets/img/u12.png' },
-    { name: 'Chandigarh University Online', courses: '30 Courses', link: '/collegeDetail', logo: 'assets/img/u13.jpeg' },
-    { name: 'BIMTECH University Online', courses: '20 Courses', link: '/collegeDetail', logo: 'assets/img/u14.png' },
-    { name: 'Lingaya Vidyapeeth University Online', courses: '50 Courses', link: '/collegeDetail', logo: 'assets/img/u15.png' },
-    { name: 'Shri Venkateshwara University Online', courses: '35 Courses', link: '/collegeDetail', logo: 'assets/img/u16.png' },
-    { name: 'Vignan University Online', courses: '40 Courses', link: '/collegeDetail', logo: 'assets/img/u17.png' },
-    { name: 'Upgrade Online', courses: '45 Courses', link: '/collegeDetail', logo: 'assets/img/u18.png' },
-    { name: 'Chitkara University', courses: '25 Courses', link: '/collegeDetail', logo: 'assets/img/u19.png' },
-    { name: 'Uttaranchal University Online', courses: '30 Courses', link: '/collegeDetail', logo: 'assets/img/u20.png' },
+    { name: 'Amity University Online', courses: '50 Courses', link: '/collegeDetail', logo: 'assets/img/df.webp' },
+    { name: 'Manipal University Online', courses: '35 Courses', link: '/collegeDetail', logo: 'assets/img/u2.webp' },
+    { name: 'Jain University Online', courses: '40 Courses', link: '/collegeDetail', logo: 'assets/img/u3.webp' },
+    { name: 'Dy Patil University Online', courses: '45 Courses', link: '/collegeDetail', logo: 'assets/img/u4.webp' },
+    { name: 'Amrita University Online', courses: '25 Courses', link: '/collegeDetail', logo: 'assets/img/u5.webp' },
+    { name: 'Liverpool John Moores University Online', courses: '30 Courses', link: '/collegeDetail', logo: 'assets/img/u6.webp' },
+    { name: 'Golden Gate University Online', courses: '20 Courses', link: '/collegeDetail', logo: 'assets/img/u7.webp' },
+    { name: 'NMIMS University Online', courses: '50 Courses', link: '/collegeDetail', logo: 'assets/img/u8.webp' },
+    { name: 'Sanskriti University Online', courses: '35 Courses', link: '/collegeDetail', logo: 'assets/img/u9.webp' },
+    { name: 'LPU University Online', courses: '40 Courses', link: '/collegeDetail', logo: 'assets/img/u10.webp' },
+    { name: 'Deakin Business School Online', courses: '45 Courses', link: '/collegeDetail', logo: 'assets/img/u11.webp' },
+    { name: 'UPES University Online', courses: '25 Courses', link: '/collegeDetail', logo: 'assets/img/u12.webp' },
+    { name: 'Chandigarh University Online', courses: '30 Courses', link: '/collegeDetail', logo: 'assets/img/u13.webp' },
+    { name: 'BIMTECH University Online', courses: '20 Courses', link: '/collegeDetail', logo: 'assets/img/u14.webp' },
+    { name: 'Lingaya Vidyapeeth University Online', courses: '50 Courses', link: '/collegeDetail', logo: 'assets/img/u15.webp' },
+    { name: 'Shri Venkateshwara University Online', courses: '35 Courses', link: '/collegeDetail', logo: 'assets/img/u16.webp' },
+    { name: 'Vignan University Online', courses: '40 Courses', link: '/collegeDetail', logo: 'assets/img/u20.webp' },
+    { name: 'Upgrade Online', courses: '45 Courses', link: '/collegeDetail', logo: 'assets/img/u17.webp' },
+    { name: 'Chitkara University', courses: '25 Courses', link: '/collegeDetail', logo: 'assets/img/u18.webp' },
+    { name: 'Uttaranchal University Online', courses: '30 Courses', link: '/collegeDetail', logo: 'assets/img/u19.webp' },
   ];
 
     // Toggle handler
@@ -173,7 +173,7 @@ return (
     </div>
   </div>
   {/* HEADER SECTION START */}
-  <header className="bg-edblue ed-header--2 relative z-[2] px-[7.9%] xxxxl:px-[6.5%] xxxl:px-[1%] lg:px-[15px] py-[25px] xxs:py-[16px] flex items-center justify-between to-be-fixed">
+  <header  className="bg-edblue ed-header--2 relative z-[2] px-[7.9%] xxxxl:px-[6.5%] xxxl:px-[1%] lg:px-[15px] py-[25px] xxs:py-[16px] flex items-center justify-between to-be-fixed">
     <div className="logo xxs:max-w-[40%]">
       <a href="index-2.html">
         <img src="assets/img/Plasaent Logo.png" style={{backgroundColor:'whitesmoke'}} alt="logo" className="logo" />
