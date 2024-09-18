@@ -9,6 +9,9 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 const Home = () => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [activeFilter, setActiveFilter] = useState('all');
+
+
 
       // Array of university items
   const universities = [
@@ -38,6 +41,9 @@ const Home = () => {
     const handleToggle = () => {
         setIsExpanded(!isExpanded);
       };
+    const handleFilterClick = (filter) => {
+          setActiveFilter(filter);
+        };
 
         // Display a subset of universities if not expanded
   const displayedUniversities = isExpanded ? universities : universities.slice(0, 12);
@@ -65,7 +71,7 @@ return (
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="/course-filter" className="hover:text-edpurple">
                 Web Development
               </a>
             </h6>
@@ -84,7 +90,7 @@ return (
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="/course-filter" className="hover:text-edpurple">
                 Digital Marketing
               </a>
             </h6>
@@ -103,7 +109,7 @@ return (
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="/course-filter" className="hover:text-edpurple">
                 WordPress Development
               </a>
             </h6>
@@ -172,185 +178,6 @@ return (
       <div className="ed-header-nav-in-mobile" />
     </div>
   </div>
-  {/* HEADER SECTION START */}
-  <header  className="bg-edblue ed-header--2 relative z-[2] px-[7.9%] xxxxl:px-[6.5%] xxxl:px-[1%] lg:px-[15px] py-[25px] xxs:py-[16px] flex items-center justify-between to-be-fixed">
-    <div className="logo xxs:max-w-[40%]">
-      <a href="index-2.html">
-        <img src="assets/img/Plasaent Logo.png" style={{backgroundColor:'whitesmoke'}} alt="logo" className="logo" />
-      </a>
-    </div>
-    <div className="flex lg:items-center lg:gap-[30px]">
-      <div className="flex lg:flex-col items-center gap-[60px] xxl:gap-[25px] xl:gap-[30px] md:gap-y-[15px]">
-        {/* search form */}
-        <form
-          action="#"
-          className="to-go-to-sidebar-in-mobile max-w-[455px] xxl:max-w-[395px] lg:max-w-[95%] lg:mx-auto border border-white/20 lg:border-black/20 rounded-[6px] overflow-hidden h-[60px] flex xl:hidden lg:flex lg:my-[10px]"
-        >
-          <input
-            type="text"
-            name="search"
-            id="ed-2-header-search"
-            className="w-full bg-transparent px-[20px] text-white lg:text-black focus:outline-0 focus-visible:outline-none"
-          />
-          <button type="submit" className="text-white lg:text-black pr-[20px]">
-            <i className="fa-solid fa-magnifying-glass" />
-          </button>
-        </form>
-        {/* nav */}
-        <ul className="to-go-to-sidebar-in-mobile ed-header-nav flex lg:flex-col gap-x-[43px] xxl:gap-x-[33px] font-kanit text-[17px] font-normal">
-          <li className="has-sub-menu relative">
-            <a role="button">Explore Courses</a>
-          </li>
-          <li>
-            <a href="#">Top Colleges</a>
-          </li>
-          <li className="has-sub-menu relative">
-            <a role="button">More</a>
-            <ul className="ed-header-submenu" style={{textAlign:"left"}}>
-              <li>
-                <a href="#">Tie Up/Partner</a>
-              </li>
-              <li>
-                <a href="#">Jobs & Placement</a>
-              </li>
-              <li>
-                <a href="#">Add Your College/University</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-              <li>
-                <a href="#">Blogs</a>
-              </li>
-              <li>
-                <a href="#">Q&As</a>
-              </li>
-              <li>
-                <a href="#">Free Resources</a>
-              </li>
-              <li>
-                <a href="#">Best Course for You(AI-Powered)</a>
-              </li>
-              <li>
-                <a href="#">Profile Sync with Placement.com</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Login</a>
-          </li>
-          {/* <li className="has-sub-menu relative">
-            <a role="button">Courses</a>
-            <ul className="ed-header-submenu">
-              <li>
-                <a href="course-grid.html">Courses Grid</a>
-              </li>
-              <li>
-                <a href="course-filter.html">Courses Filter</a>
-              </li>
-              <li>
-                <a href="course-details.html">Course Details</a>
-              </li>
-            </ul>
-          </li>
-          <li className="has-sub-menu relative">
-            <a role="button">Pages</a>
-            <ul className="ed-header-submenu">
-              <li>
-                <a href="teachers.html">Teachers</a>
-              </li>
-              <li>
-                <a href="teacher-details.html">Teacher Details</a>
-              </li>
-              <li>
-                <a href="events.html">Events</a>
-              </li>
-              <li>
-                <a href="events-2.html">Events V.2</a>
-              </li>
-              <li>
-                <a href="event-details.html">Event Details</a>
-              </li>
-              <li>
-                <a href="gallery.html">Gallery</a>
-              </li>
-              <li>
-                <a href="faq.html">FAQ</a>
-              </li>
-              <li>
-                <a href="coming-soon.html">Coming Soon Page</a>
-              </li>
-              <li>
-                <a href="404.html">Error 404</a>
-              </li>
-            </ul>
-          </li>
-          <li className="has-sub-menu relative">
-            <a role="button">News</a>
-            <ul className="ed-header-submenu">
-              <li>
-                <a href="news-grid.html">News Grid</a>
-              </li>
-              <li>
-                <a href="news-list.html">News List</a>
-              </li>
-              <li>
-                <a href="news-details.html">News Details</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="contact.html">Contact us</a>
-          </li> */}
-        </ul>
-        {/* right actions */}
-        <div className="flex items-center gap-x-[60px] xxl:gap-x-[25px] lg:gap-x-[20px]">
-
-          {/* <button className="ed-cart-opener-btn group">
-            <svg
-              width={17}
-              height={17}
-              viewBox="0 0 17 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g>
-                <path
-                  d="M12.9894 13.6354H6.93871C6.06616 13.6354 5.2925 13.0682 5.05637 12.2557L3.01122 5.38995C2.93856 5.14134 2.69705 4.97072 2.42122 4.97072H0.818742C0.446713 4.97072 0.145996 4.67212 0.145996 4.30421C0.145996 3.93629 0.446713 3.6377 0.818742 3.6377H2.42122C3.29377 3.6377 4.06676 4.2049 4.30289 5.01737L4.68568 6.30374H14.9753C15.3951 6.30374 15.7934 6.50169 16.0403 6.83361C16.2852 7.16287 16.3558 7.57477 16.234 7.96402L14.8462 12.3283C14.5744 13.1161 13.8296 13.6354 12.9894 13.6354Z"
-                  className="fill-white group-hover:fill-edyellow"
-                />
-                <path
-                  d="M7.54617 16.9687C6.80414 16.9687 6.20068 16.3707 6.20068 15.6353C6.20068 14.9 6.80414 14.302 7.54617 14.302C8.28821 14.302 8.89167 14.9 8.89167 15.6353C8.89167 16.3707 8.28821 16.9687 7.54617 16.9687Z"
-                  className="fill-white group-hover:fill-edyellow"
-                />
-                <path
-                  d="M12.2556 16.9687C11.5136 16.9687 10.9102 16.3707 10.9102 15.6353C10.9102 14.9 11.5136 14.302 12.2556 14.302C12.9977 14.302 13.6011 14.9 13.6011 15.6353C13.6011 16.3707 12.9977 16.9687 12.2556 16.9687Z"
-                  className="fill-white group-hover:fill-edyellow"
-                />
-              </g>
-            </svg>
-          </button>
-          <a
-            href="contact.html"
-            className="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]"
-          >
-            apply now
-          </a> */}
-        </div>
-      </div>
-      {/* mobile menu button */}
-      <button
-        type="button"
-        className="ed-mobile-menu-open-btn hidden lg:inline-block text-white text-[18px] hover:text-edyellow"
-      >
-        <i className="fa-solid fa-bars" />
-      </button>
-    </div>
-  </header>
-  {/* HEADER SECTION END */}
   <main>
     {/* BANNER SECTION START */}
     <section className="ed-2-banner bg-edoffwhite pt-[120px] pb-[190px] relative z-[1] overflow-hidden">
@@ -646,7 +473,21 @@ return (
     {/* Approved University Section Start */}
     <section className="clg-style">
       <h2 style={{fontSize:'50px',color:'black'}}>Approved Online & Distance Education Universities</h2>
+      <a href='collegeDetail'>
       <div className="university-logos">
+        {displayedUniversities.map((university, index) => (
+          <div className="university-item" key={index}  style={{backgroundColor:'white'}}>
+            <a href={university.link} target="_blank" rel="noopener noreferrer">
+              <img src={university.logo} alt={university.name}
+              />
+            </a>
+            <p>{university.name}</p>
+            <p>{university.courses}</p>
+          </div>
+        ))}
+      </div>
+      </a>
+      {/* <div className="university-logos">
         {displayedUniversities.map((university, index) => (
           <div className="university-item" key={index}>
             <a href={university.link} target="_blank" rel="noopener noreferrer">
@@ -657,7 +498,7 @@ return (
             <p>{university.courses}</p>
           </div>
         ))}
-      </div>
+      </div> */}
       <button className="view-more-btn" onClick={handleToggle}>
         {isExpanded ? 'View Less' : 'View More'}
       </button>
@@ -674,368 +515,129 @@ return (
           <h6 className="ed-section-sub-title">Our Courses</h6>
           <h2 className="ed-section-title">Pure Professional Courses</h2>
         </div>
-        {/* <div className="ed-2-courses-filter-navs flex flex-wrap justify-center gap-[10px] mb-[40px] xs:mb-[30px] pb-[30px] xs:pb-[20px] border-b border-[#002147]/15 mx-[200px] lg:mx-[100px] md:mx-[12px] *:border *:border-edpurple *:rounded-[6px] *:py-[5px] *:px-[10px] *:text-edpurple *:font-medium *:text-[14px]">
+        <div className="ed-2-courses-filter-navs flex flex-wrap justify-center gap-[10px] mb-[40px] xs:mb-[30px] pb-[30px] xs:pb-[20px] border-b border-[#002147]/15 mx-[200px] lg:mx-[100px] md:mx-[12px] *:border *:border-edpurple *:rounded-[6px] *:py-[5px] *:px-[10px] *:text-edpurple *:font-medium *:text-[14px]">
           <button
             className="hover:bg-edpurple hover:text-white"
-            data-filter="all"
+            onClick={() => handleFilterClick('accounts')}
+            //data-filter="all"
           >
-            All
+            Accounts and Taxation online Courses
           </button>
           <button
             className="hover:bg-edpurple hover:text-white"
-            data-filter=".personal-skill"
+            onClick={() => handleFilterClick('digital-marketing')}
+            //data-filter=".personal-skill"
           >
-            Personal Skill
+            Digital Marketing Courses
           </button>
           <button
             className="hover:bg-edpurple hover:text-white"
-            data-filter=".web-dev"
+            onClick={() => handleFilterClick('sales-marketing')}
+            //data-filter=".web-dev"
           >
-            Web Development
+            Sales and Marketing Courses
           </button>
           <button
             className="hover:bg-edpurple hover:text-white"
-            data-filter=".ui-ux-design"
+            onClick={() => handleFilterClick('web-dev')}
+            //data-filter=".ui-ux-design"
           >
-            UX/UI Design
+            Web and Software Development Courses
           </button>
-          <button
-            className="hover:bg-edpurple hover:text-white"
-            data-filter=".data-science"
-          >
-            Data Science
-          </button>
-          <button
-            className="hover:bg-edpurple hover:text-white"
-            data-filter=".finance"
-          >
-            Finance
-          </button>
-        </div> */}
+        </div>
         {/* course cards */}
-        <div className="ed-2-courses-container grid grid-cols-4 xl:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px] xxl:gap-[20px]">
+        {/* Multiple Course */}
+     
+        <div className="ed-2-courses-container grid grid-cols-4 xl:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px] xxl:gap-[20px]" style={{height:'300px'}}>
+
           {/* single course */}
+          {(activeFilter === 'all' || activeFilter === 'accounts') && (
           <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
             {/* course image  */}
-            <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+            <div className="relative overflow-hidden rounded-[10px] mb-[24px]" >
               <img
-                src="assets/img/course-1.jpg"
+                src="assets/img/c1.jpg"
                 alt="Course Image"
                 className="aspect-[330/223] w-full object-cover group-hover:scale-110"
               />
-              <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                <span className="icon">
-                  <img src="assets/img/icon/clock.svg" alt="icon" />
-                </span>
-                <span className="txt">8h 30m</span>
-              </span>
             </div>
-            {/* course infos */}
-            <div className="flex justify-between items-center mb-[16px]">
-              <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                Expert
-              </span>
-              <span className="text-edpurple font-semibold text-[20px]">
-                $59.00
-              </span>
-            </div>
-            {/* course title */}
             <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-              <a href="course-details.html" className="hover:text-edpurple">
-                Financial Analyst Training &amp; Investing Course
+              <a href="course-filter" className="hover:text-edpurple">
+              Zero day placement Diploma in Accounts and Taxation
               </a>
             </h5>
-            {/* course stats */}
-            <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-              <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                <span className="icon">
-                  <img src="assets/img/icon/user-group.svg" alt="icon" />
-                </span>
-                <span className="txt">169 Students</span>
-              </div>
-              <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                <span className="icon">
-                  <img src="assets/img/icon/lesson.svg" alt="icon" />
-                </span>
-                <span className="txt">12 Lesson</span>
-              </div>
-            </div>
-            {/* course footer */}
-            <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-              {/* course author */}
-              <div className="flex items-center gap-[8px]">
-                <img
-                  src="assets/img/user.png"
-                  alt="Course Author Image"
-                  className="w-[34px] aspect-square object-cover"
-                />
-                <a href="teacher-details.html" className="hover:text-edpurple">
-                  Jane Cooper
-                </a>
-              </div>
-              {/* course rating */}
-              <div className="flex gap-[6px]">
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#808080]">
-                  <i className="fa-solid fa-star" />
-                </span>
-              </div>
-            </div>
           </div>
+          
+          )}
           {/* single course */}
+          {(activeFilter === 'all' || activeFilter === 'digital-marketing') && (
           <div className="ed-2-single-course mix web-dev data-science border border-[#e5e5e5] rounded-[10px] p-[20px] group">
             {/* course image  */}
             <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
               <img
-                src="assets/img/course-2.jpg"
+                src="assets/img/c2.jpg"
                 alt="Course Image"
                 className="aspect-[330/223] w-full object-cover group-hover:scale-110"
               />
-              <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                <span className="icon">
-                  <img src="assets/img/icon/clock.svg" alt="icon" />
-                </span>
-                <span className="txt">8h 30m</span>
-              </span>
             </div>
             {/* course infos */}
-            <div className="flex justify-between items-center mb-[16px]">
-              <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                Expert
-              </span>
-              <span className="text-edpurple font-semibold text-[20px]">
-                $59.00
-              </span>
-            </div>
             {/* course title */}
             <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-              <a href="course-details.html" className="hover:text-edpurple">
-                Financial Analyst Training &amp; Investing Course
+              <a href="/course-filter" className="hover:text-edpurple">
+              Bachelor of Business Administration in Digital Marketing with job assistance and mentorship
               </a>
             </h5>
             {/* course stats */}
-            <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-              <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                <span className="icon">
-                  <img src="assets/img/icon/user-group.svg" alt="icon" />
-                </span>
-                <span className="txt">169 Students</span>
-              </div>
-              <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                <span className="icon">
-                  <img src="assets/img/icon/lesson.svg" alt="icon" />
-                </span>
-                <span className="txt">12 Lesson</span>
-              </div>
-            </div>
             {/* course footer */}
-            <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-              {/* course author */}
-              <div className="flex items-center gap-[8px]">
-                <img
-                  src="assets/img/user.png"
-                  alt="Course Author Image"
-                  className="w-[34px] aspect-square object-cover"
-                />
-                <a href="teacher-details.html" className="hover:text-edpurple">
-                  Jane Cooper
-                </a>
-              </div>
-              {/* course rating */}
-              <div className="flex gap-[6px]">
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#808080]">
-                  <i className="fa-solid fa-star" />
-                </span>
-              </div>
-            </div>
           </div>
+          )}
           {/* single course */}
+          {(activeFilter === 'all' || activeFilter === 'sales-marketing') && (
           <div className="ed-2-single-course mix ui-ux-design border border-[#e5e5e5] rounded-[10px] p-[20px] group">
             {/* course image  */}
             <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
               <img
-                src="assets/img/course-3.jpg"
+                src="assets/img/c3.jpg"
                 alt="Course Image"
                 className="aspect-[330/223] w-full object-cover group-hover:scale-110"
               />
-              <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                <span className="icon">
-                  <img src="assets/img/icon/clock.svg" alt="icon" />
-                </span>
-                <span className="txt">8h 30m</span>
-              </span>
             </div>
             {/* course infos */}
-            <div className="flex justify-between items-center mb-[16px]">
-              <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                Expert
-              </span>
-              <span className="text-edpurple font-semibold text-[20px]">
-                $59.00
-              </span>
-            </div>
             {/* course title */}
             <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-              <a href="course-details.html" className="hover:text-edpurple">
-                Financial Analyst Training &amp; Investing Course
+              <a href="/course-filter" className="hover:text-edpurple">
+               M.Voc in Marketing & Sales with job assistance and mentorship
               </a>
             </h5>
             {/* course stats */}
-            <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-              <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                <span className="icon">
-                  <img src="assets/img/icon/user-group.svg" alt="icon" />
-                </span>
-                <span className="txt">169 Students</span>
-              </div>
-              <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                <span className="icon">
-                  <img src="assets/img/icon/lesson.svg" alt="icon" />
-                </span>
-                <span className="txt">12 Lesson</span>
-              </div>
-            </div>
             {/* course footer */}
-            <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-              {/* course author */}
-              <div className="flex items-center gap-[8px]">
-                <img
-                  src="assets/img/user.png"
-                  alt="Course Author Image"
-                  className="w-[34px] aspect-square object-cover"
-                />
-                <a href="teacher-details.html" className="hover:text-edpurple">
-                  Jane Cooper
-                </a>
-              </div>
-              {/* course rating */}
-              <div className="flex gap-[6px]">
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#808080]">
-                  <i className="fa-solid fa-star" />
-                </span>
-              </div>
-            </div>
           </div>
+          )}
           {/* single course */}
+          {(activeFilter === 'all' || activeFilter === 'web-dev') && (
           <div className="ed-2-single-course mix finance border border-[#e5e5e5] rounded-[10px] p-[20px] group">
             {/* course image  */}
             <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
               <img
-                src="assets/img/course-4.jpg"
+                src="assets/img/c4.jpg"
                 alt="Course Image"
                 className="aspect-[330/223] w-full object-cover group-hover:scale-110"
               />
-              <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                <span className="icon">
-                  <img src="assets/img/icon/clock.svg" alt="icon" />
-                </span>
-                <span className="txt">8h 30m</span>
-              </span>
             </div>
             {/* course infos */}
-            <div className="flex justify-between items-center mb-[16px]">
-              <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                Expert
-              </span>
-              <span className="text-edpurple font-semibold text-[20px]">
-                $59.00
-              </span>
-            </div>
             {/* course title */}
             <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-              <a href="course-details.html" className="hover:text-edpurple">
-                Financial Analyst Training &amp; Investing Course
+              <a href="/course-filter" className="hover:text-edpurple">
+                Mern stack Internship program
               </a>
             </h5>
             {/* course stats */}
-            <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-              <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                <span className="icon">
-                  <img src="assets/img/icon/user-group.svg" alt="icon" />
-                </span>
-                <span className="txt">169 Students</span>
-              </div>
-              <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                <span className="icon">
-                  <img src="assets/img/icon/lesson.svg" alt="icon" />
-                </span>
-                <span className="txt">12 Lesson</span>
-              </div>
-            </div>
             {/* course footer */}
-            <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-              {/* course author */}
-              <div className="flex items-center gap-[8px]">
-                <img
-                  src="assets/img/user.png"
-                  alt="Course Author Image"
-                  className="w-[34px] aspect-square object-cover"
-                />
-                <a href="teacher-details.html" className="hover:text-edpurple">
-                  Jane Cooper
-                </a>
-              </div>
-              {/* course rating */}
-              <div className="flex gap-[6px]">
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#F8CB1E]">
-                  <i className="fa-solid fa-star" />
-                </span>
-                <span className="text-[#808080]">
-                  <i className="fa-solid fa-star" />
-                </span>
-              </div>
-            </div>
           </div>
+          )}
         </div>
-      </div>
       
-      <a href="#" className="ed-btn" style={{marginTop:'50px', marginLeft:'50%'}}>
-              View More
-            </a>
+      </div>
     </section>
     {/* COURSES SECTION END */}
     {/* ABOUT SECTION START */}
@@ -1101,7 +703,7 @@ return (
               <li>Expert mentors</li>
               <li>Lifetime Access</li>
             </ul>
-            <a href="#" className="ed-btn">
+            <a href="/about" className="ed-btn">
               know more
             </a>
           </div>
@@ -1109,345 +711,6 @@ return (
       </div>
     </section>
     {/* ABOUT SECTION END */}
-    {/* EVENTS SECTION START */}
-    <section className="ed-2-events py-[120px] xl:py-[80px] md:py-[60px]">
-      <div className="mx-[19.7%] xxxl:mx-[14.7%] xxl:mx-[9.7%] xl:mx-[3.2%] md:mx-[15px]">
-        {/* heading */}
-        <div className="flex flex-wrap items-end justify-between gap-x-[30px] gap-y-[15px] border-b border-[#002147]/15 pb-[32px] xxs:pb-[22px] mb-[40px] xxs:mb-[30px]">
-          <div className="left">
-            <h6 className="ed-section-sub-title">upcoming events</h6>
-            <h2 className="ed-section-title">upcoming event</h2>
-          </div>
-          {/* nav */}
-          <div className="ed-2-events-slider-nav flex gap-[15px] *:w-[40px] *:h-[40px] *:rounded-full *:border *:border-[#808080]/20 *:text-black *:text-[18px]">
-            <button className="prev hover:bg-edpurple hover:border-edpubg-edpurple hover:text-white">
-              <i className="fa-solid fa-angle-left" />
-            </button>
-            <button className="next hover:bg-edpurple hover:border-edpubg-edpurple hover:text-white">
-              <i className="fa-solid fa-angle-right" />
-            </button>
-          </div>
-        </div>
-        {/* events slider */}
-        <div className="ed-2-events-slider swiper">
-          <div className="swiper-wrapper">
-            <div className="swiper-slide w-[50%]">
-              <div className="space-y-[30px]">
-                {/* single event */}
-                <div className="bg-edoffwhite rounded-[20px] p-[30px] sm:p-[20px] flex lg:flex-col sm:flex-row xs:flex-col items-center lg:items-start sm:items-center xs:items-start gap-[30px] sm:gap-[20px]">
-                  {/* img */}
-                  <div className="relative">
-                    <img
-                      src="assets/img/event-4.jpg"
-                      alt="event cover"
-                      className="max-w-[215px] aspect-[215/203] object-cover rounded-[10px]"
-                    />
-                    {/* category */}
-                    <span className="absolute bottom-0 left-[50%] -translate-x-[50%] inline-flex items-center gap-[8px] bg-edyellow px-[12px] h-[35px] text-edblue font-medium text-[14px] rounded-tr-[8px] rounded-tl-[8px]">
-                      <span className="icon">
-                        <img src="assets/img/icon/convoc-cap.svg" alt="icon" />
-                      </span>
-                      <span>Skills</span>
-                    </span>
-                  </div>
-                  {/* text */}
-                  <div>
-                    <div className="flex items-center gap-[10px] font-medium text-[#808080] mb-[6px]">
-                      <span className="icon">
-                        <img
-                          src="assets/img/icon/clock-fill-yellow.svg"
-                          alt="icon"
-                        />
-                      </span>
-                      <span>11:00 - 13:30</span>
-                    </div>
-                    <h5 className="font-semibold text-[20px] text-edblue mb-[4px]">
-                      <a
-                        href="event-details.html"
-                        className="hover:text-edpurple"
-                      >
-                        Learning Communicate To Global
-                      </a>
-                    </h5>
-                    <p className="text-edgray mb-[15px]">
-                      There are many variations of passages of Lorem Ipsum
-                    </p>
-                    <a
-                      href="#"
-                      className="font-medium text-edpurple flex items-center gap-[10px] hover:text-black"
-                    >
-                      Read More{" "}
-                      <span className="icon">
-                        <i className="fa-solid fa-arrow-right-long" />
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                {/* single event */}
-                <div className="bg-edoffwhite rounded-[20px] p-[30px] sm:p-[20px] flex lg:flex-col sm:flex-row xs:flex-col items-center lg:items-start sm:items-center xs:items-start gap-[30px] sm:gap-[20px]">
-                  {/* img */}
-                  <div className="relative">
-                    <img
-                      src="assets/img/event-2.jpg"
-                      alt="event cover"
-                      className="max-w-[215px] aspect-[215/203] object-cover rounded-[10px]"
-                    />
-                    {/* category */}
-                    <span className="absolute w-max max-w-full bottom-0 left-[50%] -translate-x-[50%] inline-flex items-center gap-[8px] bg-edyellow px-[12px] h-[35px] text-edblue font-medium text-[14px] rounded-tr-[8px] rounded-tl-[8px]">
-                      <span className="icon shrink-0">
-                        <img src="assets/img/icon/convoc-cap.svg" alt="icon" />
-                      </span>
-                      <span>Programming</span>
-                    </span>
-                  </div>
-                  {/* text */}
-                  <div>
-                    <div className="flex items-center gap-[10px] font-medium text-[#808080] mb-[6px]">
-                      <span className="icon">
-                        <img
-                          src="assets/img/icon/clock-fill-yellow.svg"
-                          alt="icon"
-                        />
-                      </span>
-                      <span>11:00 - 13:30</span>
-                    </div>
-                    <h5 className="font-semibold text-[20px] text-edblue mb-[4px]">
-                      <a
-                        href="event-details.html"
-                        className="hover:text-edpurple"
-                      >
-                        Learning Communicate To Global
-                      </a>
-                    </h5>
-                    <p className="text-edgray mb-[15px]">
-                      There are many variations of passages of Lorem Ipsum
-                    </p>
-                    <a
-                      href="#"
-                      className="font-medium text-edpurple flex items-center gap-[10px] hover:text-black"
-                    >
-                      Read More{" "}
-                      <span className="icon">
-                        <i className="fa-solid fa-arrow-right-long" />
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide w-[50%]">
-              <div className="space-y-[30px]">
-                {/* single event */}
-                <div className="bg-edoffwhite rounded-[20px] p-[30px] sm:p-[20px] flex lg:flex-col sm:flex-row xs:flex-col items-center lg:items-start sm:items-center xs:items-start gap-[30px] sm:gap-[20px]">
-                  {/* img */}
-                  <div className="relative">
-                    <img
-                      src="assets/img/event-3.jpg"
-                      alt="event cover"
-                      className="max-w-[215px] aspect-[215/203] object-cover rounded-[10px]"
-                    />
-                    {/* category */}
-                    <span className="absolute bottom-0 left-[50%] -translate-x-[50%] inline-flex items-center gap-[8px] bg-edyellow px-[12px] h-[35px] text-edblue font-medium text-[14px] rounded-tr-[8px] rounded-tl-[8px]">
-                      <span className="icon">
-                        <img src="assets/img/icon/convoc-cap.svg" alt="icon" />
-                      </span>
-                      <span>Skills</span>
-                    </span>
-                  </div>
-                  {/* text */}
-                  <div>
-                    <div className="flex items-center gap-[10px] font-medium text-[#808080] mb-[6px]">
-                      <span className="icon">
-                        <img
-                          src="assets/img/icon/clock-fill-yellow.svg"
-                          alt="icon"
-                        />
-                      </span>
-                      <span>11:00 - 13:30</span>
-                    </div>
-                    <h5 className="font-semibold text-[20px] text-edblue mb-[4px]">
-                      <a
-                        href="event-details.html"
-                        className="hover:text-edpurple"
-                      >
-                        Learning Communicate To Global
-                      </a>
-                    </h5>
-                    <p className="text-edgray mb-[15px]">
-                      There are many variations of passages of Lorem Ipsum
-                    </p>
-                    <a
-                      href="#"
-                      className="font-medium text-edpurple flex items-center gap-[10px] hover:text-black"
-                    >
-                      Read More{" "}
-                      <span className="icon">
-                        <i className="fa-solid fa-arrow-right-long" />
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                {/* single event */}
-                <div className="bg-edoffwhite rounded-[20px] p-[30px] sm:p-[20px] flex lg:flex-col sm:flex-row xs:flex-col items-center lg:items-start sm:items-center xs:items-start gap-[30px] sm:gap-[20px]">
-                  {/* img */}
-                  <div className="relative">
-                    <img
-                      src="assets/img/event-1.jpg"
-                      alt="event cover"
-                      className="max-w-[215px] aspect-[215/203] object-cover rounded-[10px]"
-                    />
-                    {/* category */}
-                    <span className="absolute w-max max-w-full bottom-0 left-[50%] -translate-x-[50%] inline-flex items-center gap-[8px] bg-edyellow px-[12px] h-[35px] text-edblue font-medium text-[14px] rounded-tr-[8px] rounded-tl-[8px]">
-                      <span className="icon shrink-0">
-                        <img src="assets/img/icon/convoc-cap.svg" alt="icon" />
-                      </span>
-                      <span>Programming</span>
-                    </span>
-                  </div>
-                  {/* text */}
-                  <div>
-                    <div className="flex items-center gap-[10px] font-medium text-[#808080] mb-[6px]">
-                      <span className="icon">
-                        <img
-                          src="assets/img/icon/clock-fill-yellow.svg"
-                          alt="icon"
-                        />
-                      </span>
-                      <span>11:00 - 13:30</span>
-                    </div>
-                    <h5 className="font-semibold text-[20px] text-edblue mb-[4px]">
-                      <a
-                        href="event-details.html"
-                        className="hover:text-edpurple"
-                      >
-                        Learning Communicate To Global
-                      </a>
-                    </h5>
-                    <p className="text-edgray mb-[15px]">
-                      There are many variations of passages of Lorem Ipsum
-                    </p>
-                    <a
-                      href="#"
-                      className="font-medium text-edpurple flex items-center gap-[10px] hover:text-black"
-                    >
-                      Read More{" "}
-                      <span className="icon">
-                        <i className="fa-solid fa-arrow-right-long" />
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="swiper-slide w-[50%]">
-              <div className="space-y-[30px]">
-                {/* single event */}
-                <div className="bg-edoffwhite rounded-[20px] p-[30px] sm:p-[20px] flex lg:flex-col sm:flex-row xs:flex-col items-center lg:items-start sm:items-center xs:items-start gap-[30px] sm:gap-[20px]">
-                  {/* img */}
-                  <div className="relative">
-                    <img
-                      src="assets/img/event-4.jpg"
-                      alt="event cover"
-                      className="max-w-[215px] aspect-[215/203] object-cover rounded-[10px]"
-                    />
-                    {/* category */}
-                    <span className="absolute bottom-0 left-[50%] -translate-x-[50%] inline-flex items-center gap-[8px] bg-edyellow px-[12px] h-[35px] text-edblue font-medium text-[14px] rounded-tr-[8px] rounded-tl-[8px]">
-                      <span className="icon">
-                        <img src="assets/img/icon/convoc-cap.svg" alt="icon" />
-                      </span>
-                      <span>Skills</span>
-                    </span>
-                  </div>
-                  {/* text */}
-                  <div>
-                    <div className="flex items-center gap-[10px] font-medium text-[#808080] mb-[6px]">
-                      <span className="icon">
-                        <img
-                          src="assets/img/icon/clock-fill-yellow.svg"
-                          alt="icon"
-                        />
-                      </span>
-                      <span>11:00 - 13:30</span>
-                    </div>
-                    <h5 className="font-semibold text-[20px] text-edblue mb-[4px]">
-                      <a
-                        href="event-details.html"
-                        className="hover:text-edpurple"
-                      >
-                        Learning Communicate To Global
-                      </a>
-                    </h5>
-                    <p className="text-edgray mb-[15px]">
-                      There are many variations of passages of Lorem Ipsum
-                    </p>
-                    <a
-                      href="#"
-                      className="font-medium text-edpurple flex items-center gap-[10px] hover:text-black"
-                    >
-                      Read More{" "}
-                      <span className="icon">
-                        <i className="fa-solid fa-arrow-right-long" />
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                {/* single event */}
-                <div className="bg-edoffwhite rounded-[20px] p-[30px] sm:p-[20px] flex lg:flex-col sm:flex-row xs:flex-col items-center lg:items-start sm:items-center xs:items-start gap-[30px] sm:gap-[20px]">
-                  {/* img */}
-                  <div className="relative">
-                    <img
-                      src="assets/img/event-2.jpg"
-                      alt="event cover"
-                      className="max-w-[215px] aspect-[215/203] object-cover rounded-[10px]"
-                    />
-                    {/* category */}
-                    <span className="absolute w-max max-w-full bottom-0 left-[50%] -translate-x-[50%] inline-flex items-center gap-[8px] bg-edyellow px-[12px] h-[35px] text-edblue font-medium text-[14px] rounded-tr-[8px] rounded-tl-[8px]">
-                      <span className="icon shrink-0">
-                        <img src="assets/img/icon/convoc-cap.svg" alt="icon" />
-                      </span>
-                      <span>Programming</span>
-                    </span>
-                  </div>
-                  {/* text */}
-                  <div>
-                    <div className="flex items-center gap-[10px] font-medium text-[#808080] mb-[6px]">
-                      <span className="icon">
-                        <img
-                          src="assets/img/icon/clock-fill-yellow.svg"
-                          alt="icon"
-                        />
-                      </span>
-                      <span>11:00 - 13:30</span>
-                    </div>
-                    <h5 className="font-semibold text-[20px] text-edblue mb-[4px]">
-                      <a
-                        href="event-details.html"
-                        className="hover:text-edpurple"
-                      >
-                        Learning Communicate To Global
-                      </a>
-                    </h5>
-                    <p className="text-edgray mb-[15px]">
-                      There are many variations of passages of Lorem Ipsum
-                    </p>
-                    <a
-                      href="#"
-                      className="font-medium text-edpurple flex items-center gap-[10px] hover:text-black"
-                    >
-                      Read More{" "}
-                      <span className="icon">
-                        <i className="fa-solid fa-arrow-right-long" />
-                      </span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    {/* EVENTS SECTION END */}
     {/* CTA SECTION START */}
     <section className="ed-2-cta overflow-hidden bg-edpurple pt-[15px] md:pt-[40px] relative z-[1] before:absolute before:inset-0 before:bg-[url(../assets/img/cta-2-vector.png)] before:bg-center before:bg-no-repeat before:bg-cover before:-z-[1]">
       <div className="mx-[19.7%] xxxl:mx-[14.7%] xxl:mx-[9.7%] xl:mx-[3.2%] md:mx-[15px]">
@@ -2264,603 +1527,9 @@ return (
     {/* partners */}
   </main>
   <br/><br/>
-  {/* FOOTER SECTION START */}
-  <footer className="bg-edblue relative z-[1] before:absolute before:inset-0 before:-z-[1] before:bg-[url('assets/img/footer-bg.jpg')] before:opacity-[7%] before:bg-no-repeat before:bg-cover before:bg-center text-white">
-    <div className="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-      {/* footer top */}
-      <div className="flex flex-wrap justify-between gap-[35px] pt-[100px] pb-[58px] border-b border-white/20">
-        {/* footer about */}
-        <div className="max-w-[370px] xxs:max-w-full">
-          <a href="index-2.html" className="inline-block mb-[23px]">
-            <img src="assets/img/Plasaent Logo.png" style={{backgroundColor:'whitesmoke'}} alt="logo" />
-          </a>
-          <p className="text-[#D9D9D9] mb-[19px]">
-             GET THE RIGHT GUIDENCE WITH US
-          </p>
-          <ul className="space-y-[17px]">
-            <li className="flex items-center gap-[8px]">
-              <span className="icon">
-                <img src="assets/img/call-icon-yellow.svg" alt="icon" />
-              </span>
-              <a href="tel:+6108-666-0112" className="hover:text-edyellow">
-                +6108-666-0112
-              </a>
-            </li>
-            <li className="flex items-center gap-[8px]">
-              <span className="icon">
-                <img src="assets/img/message-yellow.svg" alt="icon" />
-              </span>
-              <a href="mailto:info@gmail.com" className="hover:text-edyellow">
-                info@gmail.com
-              </a>
-            </li>
-          </ul>
-        </div>
-        {/* footer widget */}
-        <div>
-          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
-            Online & Distance MBA
-          </h6>
-          <div className="space-y-[18px]">
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Finance
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              HR
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Marketing
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              General
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Business Analytics
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Operations
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Information Technology
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Logistics And Supply Chain (Dual)
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Healthcare Management
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Production and Operation (Dual)
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Data Science and Analytics (Dual)
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Data Science
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Project Management
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Retail Management
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              View All
-            </a>
-          </div>
-          <br/><br/>
-
-          <div>
-          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
-            Online & Distance Best College for
-          </h6>
-          <div className="space-y-[18px]">
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Best Colleges for Online MBA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Best Colleges for Executive MBA for Working
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Professionals
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Best Colleges for Online Global MBA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Best Colleges for 1 Year MBA Online 
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              View All
-            </a>
-          </div>
-        </div>
-        </div>
-        <div>
-          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
-            Online & Distance UG Courses
-          </h6>
-          <div className="space-y-[18px]">
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online BCA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online BBA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online B.Com
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              B.Tech for Working Professionals
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online MBA after Diploma
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online BA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online B.Sc
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Distance BCA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Distance BBA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online BBA Dual
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online B.Com Honours
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Distance B.Com
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              B.Tech After Diploma
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Part-Time B.Tech
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              View All
-            </a>
-          </div>
-        
-          <br/><br/>
-
-          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
-            Online & Distance PG Courses
-          </h6>
-          <div className="space-y-[18px]">
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online MBA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Executive MBA for Working Professionals
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online Global MBA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              1 Year MBA Online
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Dual MBA Online
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online MCA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online MA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              M.Tech
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online M.Com
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online M.Sc
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online MBA Plus
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Distance MBA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online PG Diploma & Certificate
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Online PGDM
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              View All
-            </a>
-          </div>
- 
-        </div>
-        {/* footer widget */}
-        {/* <div>
-          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
-            Online & Distance Best College for
-          </h6>
-          <div className="space-y-[18px]">
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Best Colleges for Online MBA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Best Colleges for Executive MBA for Working
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Professionals
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Best Colleges for Online Global MBA
-            </a>
-            <a
-              href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
-            >
-              <span className="icon">
-                <img src="assets/img/double-arrow.svg" alt="icon" />
-              </span>{" "}
-              Best Colleges for 1 Year MBA Online 
-            </a>
-          </div>
-        </div> */}
-        {/* footer widget */}
-      </div>
-      {/* footer bottom */}
-      <div className="flex flex-wrap items-center justify-between gap-[15px] pt-[20px] pb-[50px] text-[#d9d9d9]">
-        <p>© All Copyright 2024 by Vagonon</p>
-        <div className="flex flex-wrap gap-[40px] xxs:gap-[15px]">
-          <a href="#" className="hover:text-edyellow">
-            Terms &amp; Conditions
-          </a>
-          <a href="#" className="hover:text-edyellow">
-            Privacy Policy
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  {/* FOOTER SECTION END */}
 </>
 
   )
 }
 
-export default Home
+export default Home;

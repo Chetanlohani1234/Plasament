@@ -132,220 +132,7 @@ const CourseFilter = () => {
       <div className="ed-header-nav-in-mobile" />
     </div>
   </div>
-  {/* HEADER SECTION START */}
-  <header className="bg-edblue ed-header--2 relative z-[2] px-[7.9%] xxxxl:px-[6.5%] xxxl:px-[1%] lg:px-[15px] py-[25px] xxs:py-[16px] flex items-center justify-between to-be-fixed">
-    <div className="logo xxs:max-w-[40%]">
-      <a href="index-2.html">
-        <img src="assets/img/Plasaent Logo.png" style={{backgroundColor:'whitesmoke'}} alt="logo" className="logo" />
-      </a>
-    </div>
-    <div className="flex lg:items-center lg:gap-[30px]">
-      <div className="flex lg:flex-col items-center gap-[60px] xxl:gap-[25px] xl:gap-[30px] md:gap-y-[15px]">
-        {/* search form */}
-        <form
-          action="#"
-          className="to-go-to-sidebar-in-mobile max-w-[455px] xxl:max-w-[395px] lg:max-w-[95%] lg:mx-auto border border-white/20 lg:border-black/20 rounded-[6px] overflow-hidden h-[60px] flex xl:hidden lg:flex lg:my-[10px]"
-        >
-          <input
-            type="text"
-            name="search"
-            id="ed-2-header-search"
-            className="w-full bg-transparent px-[20px] text-white lg:text-black focus:outline-0 focus-visible:outline-none"
-          />
-          <button type="submit" className="text-white lg:text-black pr-[20px]">
-            <i className="fa-solid fa-magnifying-glass" />
-          </button>
-        </form>
-        {/* nav */}
-        <ul className="to-go-to-sidebar-in-mobile ed-header-nav flex lg:flex-col gap-x-[43px] xxl:gap-x-[33px] font-kanit text-[17px] font-normal">
-          <li className="has-sub-menu relative">
-            <a role="button">Explore Courses</a>
-          </li>
-          <li>
-            <a href="#">Top Colleges</a>
-          </li>
-          <li className="has-sub-menu relative">
-            <a role="button">More</a>
-            <ul className="ed-header-submenu" style={{textAlign:"left"}}>
-              <li>
-                <a href="#">Tie Up/Partner</a>
-              </li>
-              <li>
-                <a href="#">Jobs & Placement</a>
-              </li>
-              <li>
-                <a href="#">Add Your College/University</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
-              <li>
-                <a href="#">Blogs</a>
-              </li>
-              <li>
-                <a href="#">Q&As</a>
-              </li>
-              <li>
-                <a href="#">Free Resources</a>
-              </li>
-              <li>
-                <a href="#">Best Course for You(AI-Powered)</a>
-              </li>
-              <li>
-                <a href="#">Profile Sync with Placement.com</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">Login</a>
-          </li>
-          {/* <li className="has-sub-menu relative">
-            <a role="button">Courses</a>
-            <ul className="ed-header-submenu">
-              <li>
-                <a href="course-grid.html">Courses Grid</a>
-              </li>
-              <li>
-                <a href="course-filter.html">Courses Filter</a>
-              </li>
-              <li>
-                <a href="course-details.html">Course Details</a>
-              </li>
-            </ul>
-          </li>
-          <li className="has-sub-menu relative">
-            <a role="button">Pages</a>
-            <ul className="ed-header-submenu">
-              <li>
-                <a href="teachers.html">Teachers</a>
-              </li>
-              <li>
-                <a href="teacher-details.html">Teacher Details</a>
-              </li>
-              <li>
-                <a href="events.html">Events</a>
-              </li>
-              <li>
-                <a href="events-2.html">Events V.2</a>
-              </li>
-              <li>
-                <a href="event-details.html">Event Details</a>
-              </li>
-              <li>
-                <a href="gallery.html">Gallery</a>
-              </li>
-              <li>
-                <a href="faq.html">FAQ</a>
-              </li>
-              <li>
-                <a href="coming-soon.html">Coming Soon Page</a>
-              </li>
-              <li>
-                <a href="404.html">Error 404</a>
-              </li>
-            </ul>
-          </li>
-          <li className="has-sub-menu relative">
-            <a role="button">News</a>
-            <ul className="ed-header-submenu">
-              <li>
-                <a href="news-grid.html">News Grid</a>
-              </li>
-              <li>
-                <a href="news-list.html">News List</a>
-              </li>
-              <li>
-                <a href="news-details.html">News Details</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="contact.html">Contact us</a>
-          </li> */}
-        </ul>
-        {/* right actions */}
-        <div className="flex items-center gap-x-[60px] xxl:gap-x-[25px] lg:gap-x-[20px]">
-
-          {/* <button className="ed-cart-opener-btn group">
-            <svg
-              width={17}
-              height={17}
-              viewBox="0 0 17 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g>
-                <path
-                  d="M12.9894 13.6354H6.93871C6.06616 13.6354 5.2925 13.0682 5.05637 12.2557L3.01122 5.38995C2.93856 5.14134 2.69705 4.97072 2.42122 4.97072H0.818742C0.446713 4.97072 0.145996 4.67212 0.145996 4.30421C0.145996 3.93629 0.446713 3.6377 0.818742 3.6377H2.42122C3.29377 3.6377 4.06676 4.2049 4.30289 5.01737L4.68568 6.30374H14.9753C15.3951 6.30374 15.7934 6.50169 16.0403 6.83361C16.2852 7.16287 16.3558 7.57477 16.234 7.96402L14.8462 12.3283C14.5744 13.1161 13.8296 13.6354 12.9894 13.6354Z"
-                  className="fill-white group-hover:fill-edyellow"
-                />
-                <path
-                  d="M7.54617 16.9687C6.80414 16.9687 6.20068 16.3707 6.20068 15.6353C6.20068 14.9 6.80414 14.302 7.54617 14.302C8.28821 14.302 8.89167 14.9 8.89167 15.6353C8.89167 16.3707 8.28821 16.9687 7.54617 16.9687Z"
-                  className="fill-white group-hover:fill-edyellow"
-                />
-                <path
-                  d="M12.2556 16.9687C11.5136 16.9687 10.9102 16.3707 10.9102 15.6353C10.9102 14.9 11.5136 14.302 12.2556 14.302C12.9977 14.302 13.6011 14.9 13.6011 15.6353C13.6011 16.3707 12.9977 16.9687 12.2556 16.9687Z"
-                  className="fill-white group-hover:fill-edyellow"
-                />
-              </g>
-            </svg>
-          </button>
-          <a
-            href="contact.html"
-            className="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]"
-          >
-            apply now
-          </a> */}
-        </div>
-      </div>
-      {/* mobile menu button */}
-      <button
-        type="button"
-        className="ed-mobile-menu-open-btn hidden lg:inline-block text-white text-[18px] hover:text-edyellow"
-      >
-        <i className="fa-solid fa-bars" />
-      </button>
-    </div>
-  </header>
-  {/* HEADER SECTION END */}
   <main>
-    {/* BREADCRUMB SECTION START */}
-    <section className="pt-[327px] xl:pt-[287px] lg:pt-[237px] sm:pt-[200px] xxs:pt-[180px] pb-[158px] xl:pb-[118px] lg:pb-[98px] sm:pb-[68px] xs:pb-[48px] text-center bg-[url('assets/img/breadcrumb-bg.jpg')] bg-no-repeat bg-cover bg-center relative z-[1] overflow-hidden before:absolute before:-z-[1] before:inset-0 before:bg-edblue/70 before:pointer-events-none">
-      <div className="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-        <h1 className="font-semibold text-[clamp(35px,6vw,56px)] text-white">
-          Course Filter
-        </h1>
-        <ul className="flex items-center justify-center gap-[10px] text-white">
-          <li>
-            <a href="index-2.html" className="text-edyellow">
-              Home
-            </a>
-          </li>
-          <li>
-            <span className="text-[12px]">
-              <i className="fa-solid fa-angle-double-right" />
-            </span>
-          </li>
-          <li>Course Filter</li>
-        </ul>
-      </div>
-      <div className="vectors">
-        <img
-          src="assets/img/breadcrumb-vector-1.svg"
-          alt="vector"
-          className="absolute -z-[1] pointer-events-none bottom-[34px] left-0 xl:left-auto xl:right-[90%]"
-        />
-        <img
-          src="assets/img/breadcrumb-vector-2.svg"
-          alt="vector"
-          className="absolute -z-[1] pointer-events-none bottom-0 right-0 xl:right-auto xl:left-[60%]"
-        />
-      </div>
-    </section>
-    {/* BREADCRUMB SECTION END */}
     <div className="py-[120px] xl:py-[80px] md:py-[60px]">
       <div className="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
         <div className="flex gap-[30px] lg:gap-[20px] md:flex-col md:items-center">
@@ -428,491 +215,166 @@ const CourseFilter = () => {
                 {/* course image  */}
                 <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
                   <img
-                    src="assets/img/course-1.jpg"
+                    src="assets/img/c1.jpg"
                     alt="Course Image"
                     className="aspect-[330/223] w-full object-cover group-hover:scale-110"
                   />
-                  <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                    <span className="icon">
-                      <img src="assets/img/icon/clock.svg" alt="icon" />
-                    </span>
-                    <span className="txt">8h 30m</span>
-                  </span>
                 </div>
                 {/* course infos */}
                 <div className="flex justify-between items-center mb-[16px]">
                   <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                    Expert
+                    Price
                   </span>
                   <span className="text-edpurple font-semibold text-[20px]">
-                    $59.00
+                    Rs 92000
                   </span>
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
                   <a href="course-details.html" className="hover:text-edpurple">
-                    Financial Analyst Training &amp; Investing Course
+                  Zero day placement Diploma in Accounts and Taxation
                   </a>
                 </h5>
                 {/* course stats */}
-                <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/user-group.svg" alt="icon" />
-                    </span>
-                    <span className="txt">169 Students</span>
-                  </div>
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/lesson.svg" alt="icon" />
-                    </span>
-                    <span className="txt">12 Lesson</span>
-                  </div>
-                </div>
                 {/* course footer */}
-                <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-                  {/* course author */}
-                  <div className="flex items-center gap-[8px]">
-                    <img
-                      src="assets/img/user.png"
-                      alt="Course Author Image"
-                      className="w-[34px] aspect-square object-cover"
-                    />
-                    <a
-                      href="teacher-details.html"
-                      className="hover:text-edpurple"
-                    >
-                      Jane Cooper
-                    </a>
-                  </div>
-                  {/* course rating */}
-                  <div className="flex gap-[6px]">
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#808080]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                  </div>
-                </div>
               </div>
               {/* single course card */}
               <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
                 {/* course image  */}
                 <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
                   <img
-                    src="assets/img/course-2.jpg"
+                    src="assets/img/ca1.jpg"
                     alt="Course Image"
                     className="aspect-[330/223] w-full object-cover group-hover:scale-110"
                   />
-                  <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                    <span className="icon">
-                      <img src="assets/img/icon/clock.svg" alt="icon" />
-                    </span>
-                    <span className="txt">8h 30m</span>
-                  </span>
                 </div>
                 {/* course infos */}
                 <div className="flex justify-between items-center mb-[16px]">
                   <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                    Expert
+                    Price
                   </span>
                   <span className="text-edpurple font-semibold text-[20px]">
-                    $59.00
+                    Rs 52000
                   </span>
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
                   <a href="course-details.html" className="hover:text-edpurple">
-                    Financial Analyst Training &amp; Investing Course
+                  Bachelor of Vocational in Accounts and Taxation with job assistance and mentorship
                   </a>
                 </h5>
                 {/* course stats */}
-                <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/user-group.svg" alt="icon" />
-                    </span>
-                    <span className="txt">169 Students</span>
-                  </div>
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/lesson.svg" alt="icon" />
-                    </span>
-                    <span className="txt">12 Lesson</span>
-                  </div>
-                </div>
                 {/* course footer */}
-                <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-                  {/* course author */}
-                  <div className="flex items-center gap-[8px]">
-                    <img
-                      src="assets/img/user.png"
-                      alt="Course Author Image"
-                      className="w-[34px] aspect-square object-cover"
-                    />
-                    <a
-                      href="teacher-details.html"
-                      className="hover:text-edpurple"
-                    >
-                      Jane Cooper
-                    </a>
-                  </div>
-                  {/* course rating */}
-                  <div className="flex gap-[6px]">
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#808080]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                  </div>
-                </div>
               </div>
               {/* single course card */}
               <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
                 {/* course image  */}
                 <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
                   <img
-                    src="assets/img/course-3.jpg"
+                    src="assets/img/ca2.jpg"
                     alt="Course Image"
                     className="aspect-[330/223] w-full object-cover group-hover:scale-110"
                   />
-                  <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                    <span className="icon">
-                      <img src="assets/img/icon/clock.svg" alt="icon" />
-                    </span>
-                    <span className="txt">8h 30m</span>
-                  </span>
                 </div>
                 {/* course infos */}
                 <div className="flex justify-between items-center mb-[16px]">
                   <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                    Expert
+                    Price
                   </span>
                   <span className="text-edpurple font-semibold text-[20px]">
-                    $59.00
+                    Rs 52000
                   </span>
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
                   <a href="course-details.html" className="hover:text-edpurple">
-                    Financial Analyst Training &amp; Investing Course
+                  Bachelor of Commerce in Accounts and Taxation with job assistance and mentorship
                   </a>
                 </h5>
                 {/* course stats */}
-                <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/user-group.svg" alt="icon" />
-                    </span>
-                    <span className="txt">169 Students</span>
-                  </div>
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/lesson.svg" alt="icon" />
-                    </span>
-                    <span className="txt">12 Lesson</span>
-                  </div>
-                </div>
-                {/* course footer */}
-                <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-                  {/* course author */}
-                  <div className="flex items-center gap-[8px]">
-                    <img
-                      src="assets/img/user.png"
-                      alt="Course Author Image"
-                      className="w-[34px] aspect-square object-cover"
-                    />
-                    <a
-                      href="teacher-details.html"
-                      className="hover:text-edpurple"
-                    >
-                      Jane Cooper
-                    </a>
-                  </div>
-                  {/* course rating */}
-                  <div className="flex gap-[6px]">
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#808080]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                  </div>
-                </div>
               </div>
               {/* single course card */}
               <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
                 {/* course image  */}
                 <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
                   <img
-                    src="assets/img/course-4.jpg"
+                    src="assets/img/ca4.jpg"
                     alt="Course Image"
                     className="aspect-[330/223] w-full object-cover group-hover:scale-110"
                   />
-                  <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                    <span className="icon">
-                      <img src="assets/img/icon/clock.svg" alt="icon" />
-                    </span>
-                    <span className="txt">8h 30m</span>
-                  </span>
                 </div>
                 {/* course infos */}
                 <div className="flex justify-between items-center mb-[16px]">
                   <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                    Expert
+                    Price
                   </span>
                   <span className="text-edpurple font-semibold text-[20px]">
-                    $59.00
+                    Rs 92000
                   </span>
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
                   <a href="course-details.html" className="hover:text-edpurple">
-                    Financial Analyst Training &amp; Investing Course
+                  PG Diploma in Accounts and Taxation with job assistance and mentorship
                   </a>
                 </h5>
                 {/* course stats */}
-                <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/user-group.svg" alt="icon" />
-                    </span>
-                    <span className="txt">169 Students</span>
-                  </div>
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/lesson.svg" alt="icon" />
-                    </span>
-                    <span className="txt">12 Lesson</span>
-                  </div>
-                </div>
-                {/* course footer */}
-                <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-                  {/* course author */}
-                  <div className="flex items-center gap-[8px]">
-                    <img
-                      src="assets/img/user.png"
-                      alt="Course Author Image"
-                      className="w-[34px] aspect-square object-cover"
-                    />
-                    <a
-                      href="teacher-details.html"
-                      className="hover:text-edpurple"
-                    >
-                      Jane Cooper
-                    </a>
-                  </div>
-                  {/* course rating */}
-                  <div className="flex gap-[6px]">
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#808080]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                  </div>
-                </div>
               </div>
               {/* single course card */}
               <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
                 {/* course image  */}
                 <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
                   <img
-                    src="assets/img/course-5.jpg"
+                    src="assets/img/ca5.jpg"
                     alt="Course Image"
                     className="aspect-[330/223] w-full object-cover group-hover:scale-110"
                   />
-                  <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                    <span className="icon">
-                      <img src="assets/img/icon/clock.svg" alt="icon" />
-                    </span>
-                    <span className="txt">8h 30m</span>
-                  </span>
                 </div>
                 {/* course infos */}
                 <div className="flex justify-between items-center mb-[16px]">
                   <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                    Expert
+                    Price
                   </span>
                   <span className="text-edpurple font-semibold text-[20px]">
-                    $59.00
+                    Rs 77000
                   </span>
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
                   <a href="course-details.html" className="hover:text-edpurple">
-                    Financial Analyst Training &amp; Investing Course
+                  M.Com in Accounts and Taxation with job assistance and mentorship
                   </a>
                 </h5>
                 {/* course stats */}
-                <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/user-group.svg" alt="icon" />
-                    </span>
-                    <span className="txt">169 Students</span>
-                  </div>
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/lesson.svg" alt="icon" />
-                    </span>
-                    <span className="txt">12 Lesson</span>
-                  </div>
-                </div>
-                {/* course footer */}
-                <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-                  {/* course author */}
-                  <div className="flex items-center gap-[8px]">
-                    <img
-                      src="assets/img/user.png"
-                      alt="Course Author Image"
-                      className="w-[34px] aspect-square object-cover"
-                    />
-                    <a
-                      href="teacher-details.html"
-                      className="hover:text-edpurple"
-                    >
-                      Jane Cooper
-                    </a>
-                  </div>
-                  {/* course rating */}
-                  <div className="flex gap-[6px]">
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#808080]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                  </div>
-                </div>
               </div>
               {/* single course card */}
               <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
                 {/* course image  */}
                 <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
                   <img
-                    src="assets/img/course-1.jpg"
+                    src="assets/img/ca6.jpg"
                     alt="Course Image"
                     className="aspect-[330/223] w-full object-cover group-hover:scale-110"
                   />
-                  <span className="absolute bg-edyellow px-[10px] h-[33px] flex gap-[8px] items-center top-[16px] left-[16px] rounded-[6px]">
-                    <span className="icon">
-                      <img src="assets/img/icon/clock.svg" alt="icon" />
-                    </span>
-                    <span className="txt">8h 30m</span>
-                  </span>
                 </div>
                 {/* course infos */}
                 <div className="flex justify-between items-center mb-[16px]">
                   <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
-                    Expert
+                    Price
                   </span>
                   <span className="text-edpurple font-semibold text-[20px]">
-                    $59.00
+                    Rs 52000
                   </span>
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
                   <a href="course-details.html" className="hover:text-edpurple">
-                    Financial Analyst Training &amp; Investing Course
+                  BBA in Accounts and Taxation with Job Assistance and Mentorship
                   </a>
                 </h5>
                 {/* course stats */}
-                <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[10px]">
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/user-group.svg" alt="icon" />
-                    </span>
-                    <span className="txt">169 Students</span>
-                  </div>
-                  <div className="flex items-center gap-[8px] text-[14px] text-edgray">
-                    <span className="icon">
-                      <img src="assets/img/icon/lesson.svg" alt="icon" />
-                    </span>
-                    <span className="txt">12 Lesson</span>
-                  </div>
-                </div>
                 {/* course footer */}
                 <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
-                  {/* course author */}
-                  <div className="flex items-center gap-[8px]">
-                    <img
-                      src="assets/img/user.png"
-                      alt="Course Author Image"
-                      className="w-[34px] aspect-square object-cover"
-                    />
-                    <a
-                      href="teacher-details.html"
-                      className="hover:text-edpurple"
-                    >
-                      Jane Cooper
-                    </a>
-                  </div>
-                  {/* course rating */}
-                  <div className="flex gap-[6px]">
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#F8CB1E]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                    <span className="text-[#808080]">
-                      <i className="fa-solid fa-star" />
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
