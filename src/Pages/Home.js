@@ -1372,7 +1372,7 @@ return (
           </div>
           {/* right */}
           <a
-            href="news-grid.html"
+            href="/blog"
             className="ed-btn !h-[56px] gap-[10px] border border-[#E5E5E5] !bg-transparent !text-edpurple hover:!bg-edpurple hover:!border-edpurple hover:!text-white"
           >
             View all blog{" "}
@@ -1423,7 +1423,7 @@ return (
                 </div>
               </div>
               <h5 className="font-medium text-[20px]">
-                <a href="news-details.html" className="hover:text-edpurple">
+                <a href="/blog" className="hover:text-edpurple">
                   Collaboratively pontificate bleeding edge resources with
                   inexpensive methodologies
                 </a>
@@ -1465,7 +1465,7 @@ return (
                   </div>
                 </div>
                 <h5 className="font-medium text-[20px] mb-[17px]">
-                  <a href="news-details.html" className="hover:text-edpurple">
+                  <a href="/blog" className="hover:text-edpurple">
                     Collaboratively pontificate bleedi edge resources
                   </a>
                 </h5>
@@ -1511,7 +1511,7 @@ return (
                   </div>
                 </div>
                 <h5 className="font-medium text-[20px] mb-[17px]">
-                  <a href="news-details.html" className="hover:text-edpurple">
+                  <a href="/blog" className="hover:text-edpurple">
                     Collaboratively pontificate bleedi edge resources
                   </a>
                 </h5>
