@@ -440,8 +440,8 @@ return (
           disableOnInteraction: false,
         }}
        // navigation
-        pagination={{ clickable: true }}
-        modules={[Autoplay, Pagination]} // Register Swiper modules here
+       // pagination={{ clickable: true }}
+       // modules={[Autoplay, Pagination]} // Register Swiper modules here
       >
         <SwiperSlide>
           <img src="assets/img/p1.png" alt="Partner 1" />
@@ -472,7 +472,7 @@ return (
 
     {/* Approved University Section Start */}
     <section className="clg-style">
-      <h2 style={{fontSize:'50px',color:'black'}}>Approved Online & Distance Education Universities</h2>
+      <h2>Approved Online & Distance Education Universities</h2>
       <a href='collegeDetail'>
       <div className="university-logos">
         {displayedUniversities.map((university, index) => (
@@ -548,7 +548,7 @@ return (
         {/* course cards */}
         {/* Multiple Course */}
      
-        <div className="ed-2-courses-container grid grid-cols-4 xl:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px] xxl:gap-[20px]" style={{height:'300px'}}>
+        <div className="ed-2-courses-container grid grid-cols-4 xl:grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px] xxl:gap-[20px]">
 
           {/* single course */}
           {(activeFilter === 'all' || activeFilter === 'accounts') && (
