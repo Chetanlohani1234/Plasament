@@ -294,7 +294,7 @@ const CourseDetail = () => {
                   </div>
                   )}
                   {/* tab 02 */}
-                  {(activeFilter === 'all' || activeFilter === 'curriculum') && (
+                  {(activeFilter === 'curriculum') && (
                   <div id="curriculum" className="ed-tab duration-[400ms] active">
                     <div className="mb-[10px]">
                       <h4 className="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mt-[28px] mb-[15px]">

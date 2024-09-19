@@ -10,6 +10,7 @@ import Footer from './Pages/Footer';
 import Header from './Pages/Header';
 import Contact from './Pages/Contact';
 import CourseDetail from './Pages/CourseDetail';
+import Blog from './Pages/Blog';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
        <Route path='/course-filter' element = {<CourseFilter />}/>
        <Route path='/contact' element = {<Contact />}/>
        <Route path='/courseDetail' element = {<CourseDetail/>}/>
+       <Route path='/blog' element={<Blog/>}/>
      </Routes>
      <Footer/>
      </BrowserRouter>
