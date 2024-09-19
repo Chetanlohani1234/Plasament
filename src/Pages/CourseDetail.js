@@ -143,7 +143,7 @@ const CourseDetail = () => {
     <div className="py-[120px] xl:py-[80px] md:py-[60px]">
       <div className="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
         {/* cover */}
-        <div className="rounded-[8px] overflow-hidden relative z-[2] before:absolute before:inset-0 before:-z-[0] before:bg-edpurple/20 mb-[40px] md:mb-[25px] xs:mb-[15px]">
+        {/* <div className="rounded-[8px] overflow-hidden relative z-[2] before:absolute before:inset-0 before:-z-[0] before:bg-edpurple/20 mb-[40px] md:mb-[25px] xs:mb-[15px]">
           <img
             src="assets/img/course-details-img.jpg"
             alt="Course Cover"
@@ -156,7 +156,7 @@ const CourseDetail = () => {
           >
             <i className="fa-solid fa-play" />
           </a>
-        </div>
+        </div> */}
         {/* txt */}
         <div className="flex gap-[30px] lg:gap-[20px] md:flex-col md:items-center">
           <div className="left max-w-full grow">
