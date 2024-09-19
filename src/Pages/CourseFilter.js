@@ -1,6 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 const CourseFilter = () => {
+  const [selectedCategory, setSelectedCategory] = useState("Accounts and Taxation");
+  
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
   return (
     <>
   <div className="ed-overlay group">
@@ -25,7 +31,7 @@ const CourseFilter = () => {
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="/courseDetail" className="hover:text-edpurple">
                 Web Development
               </a>
             </h6>
@@ -44,7 +50,7 @@ const CourseFilter = () => {
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="/courseDetail" className="hover:text-edpurple">
                 Digital Marketing
               </a>
             </h6>
@@ -63,7 +69,7 @@ const CourseFilter = () => {
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="/courseDetail" className="hover:text-edpurple">
                 WordPress Development
               </a>
             </h6>
@@ -140,11 +146,11 @@ const CourseFilter = () => {
           <div className="right sticky md:static top-[140px] h-full max-w-full w-[370px] lg:w-[300px] shrink-0 space-y-[30px] md:space-y-[25px] bg-white rounded-[10px] p-[30px] xxs:px-[20px] pt-[20px] xxs:pt-[10px] shadow-[0_4px_30px_rgba(0,0,0,0.08)]">
             {/* search widget */}
             <div>
-              <h4 className="font-semibold text-[18px] text-black border-b border-[#dddddd] relative pb-[11px] before:content-normal before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-[2px] before:bg-edpurple">
+              {/* <h4 className="font-semibold text-[18px] text-black border-b border-[#dddddd] relative pb-[11px] before:content-normal before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-[2px] before:bg-edpurple">
                 Search
-              </h4>
+              </h4> */}
               {/* search form */}
-              <form
+              {/* <form
                 action="#"
                 className="bg-[#f8f8f8] flex h-[50px] px-[15px] mt-[24px]"
               >
@@ -161,12 +167,12 @@ const CourseFilter = () => {
                 >
                   <i className="fa-solid fa-magnifying-glass" />
                 </button>
-              </form>
+              </form> */}
             </div>
             {/* filter */}
             <div>
               <h4 className="font-semibold text-[18px] text-black border-b border-[#dddddd] relative pb-[11px] before:content-normal before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-[2px] before:bg-edpurple">
-                Filter By
+                Filter By Course
               </h4>
               {/* field filter */}
               <div className="border-b border-[#E3E3E3] pb-[24px]">
@@ -177,16 +183,22 @@ const CourseFilter = () => {
                   <select
                     name="course category"
                     className="bg-transparent w-full py-[12px] focus:outline-none"
+                    onChange={handleCategoryChange} // Event handler for selection
+                    value={selectedCategory} // Bind selected value to state
                   >
-                    <option value="UI/UX Design">UI/UX Design</option>
-                    <option value="Content Writing">Content Writing</option>
-                    <option value="Seo Optimization">Seo Optimization</option>
-                    <option value="Web Development">Web Development</option>
+                    <option value="Accounts and Taxation">Accounts and Taxation</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Sales and Marketing">Sales and Marketing</option>
+                    <option value="Web and Software Development">Web and Software Development</option>
+                    <option value="Human Resource and Administration">Human Resource and Administration</option>
+                    <option value="Graphic & Animation">Graphic & Animation</option>
+                    
+
                   </select>
                 </form>
               </div>
               {/* location filter */}
-              <div>
+              {/* <div>
                 <span className="font-medium text-[16px] text-edblue block pt-[18px] pb-[15px]">
                   Location Type
                 </span>
@@ -204,11 +216,23 @@ const CourseFilter = () => {
                     </label>
                   </div>
                 </form>
-              </div>
+              </div> */}
             </div>
           </div>
           {/* right content */}
           <div className="left grow">
+          
+          <div className="text-center mb-[21px]">
+            <h6 className="ed-section-sub-title">Our Courses</h6>
+            
+          </div>
+
+          {/* Accounts and Taxation online Courses Section*/}
+          {selectedCategory === "Accounts and Taxation" && (
+           <div>
+                <div className="text-center mb-[21px]">
+                    <h2 className="ed-section-title">Accounts and Taxation Courses</h2>
+                </div>
             <div className="grid grid-cols-2 md:grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px]">
               {/* single course card */}
               <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
@@ -231,7 +255,7 @@ const CourseFilter = () => {
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-                  <a href="course-details.html" className="hover:text-edpurple">
+                  <a href="/courseDetail" className="hover:text-edpurple">
                   Zero day placement Diploma in Accounts and Taxation
                   </a>
                 </h5>
@@ -259,7 +283,7 @@ const CourseFilter = () => {
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-                  <a href="course-details.html" className="hover:text-edpurple">
+                  <a href="/courseDetail" className="hover:text-edpurple">
                   Bachelor of Vocational in Accounts and Taxation with job assistance and mentorship
                   </a>
                 </h5>
@@ -287,7 +311,7 @@ const CourseFilter = () => {
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-                  <a href="course-details.html" className="hover:text-edpurple">
+                  <a href="/courseDetail" className="hover:text-edpurple">
                   Bachelor of Commerce in Accounts and Taxation with job assistance and mentorship
                   </a>
                 </h5>
@@ -314,7 +338,7 @@ const CourseFilter = () => {
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-                  <a href="course-details.html" className="hover:text-edpurple">
+                  <a href="/courseDetail" className="hover:text-edpurple">
                   PG Diploma in Accounts and Taxation with job assistance and mentorship
                   </a>
                 </h5>
@@ -341,7 +365,7 @@ const CourseFilter = () => {
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-                  <a href="course-details.html" className="hover:text-edpurple">
+                  <a href="/courseDetail" className="hover:text-edpurple">
                   M.Com in Accounts and Taxation with job assistance and mentorship
                   </a>
                 </h5>
@@ -368,7 +392,7 @@ const CourseFilter = () => {
                 </div>
                 {/* course title */}
                 <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
-                  <a href="course-details.html" className="hover:text-edpurple">
+                  <a href="/courseDetail" className="hover:text-edpurple">
                   BBA in Accounts and Taxation with Job Assistance and Mentorship
                   </a>
                 </h5>
@@ -378,8 +402,850 @@ const CourseFilter = () => {
                 </div>
               </div>
             </div>
+            </div>
+
+          )}
+          
+            {/* Digital Marketing Course Section */}
+       
+          {selectedCategory === "Digital Marketing" && (
+            <div>
+                <div className="text-center mb-[21px]">
+                     <h2 className="ed-section-title">Digital Marketing Courses</h2>
+                </div>
+            <div className="grid grid-cols-2 md:grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px]">
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cd1.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 52000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                   Bachelor of Vocational in Digital Marketing with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cd2.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 77000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  MBA in Digital Marketing with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cd3.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                   PG Diploma in Digital Marketing with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cd4.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 77000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Master Of Vocational in Digital Marketing  with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cd5.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 52000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Bachelor of Business Administration Digital Marketing with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cd6.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                   Zero Day Placement Diploma in Digital Marketing
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+                <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
+                </div>
+              </div>
+            </div>
+            </div>
+          )}
+
+            {/* Sales and Marketing Courses Section */}
+
+            {selectedCategory === "Sales and Marketing" && (
+            <div>
+                  <div className="text-center mb-[21px]">
+                    <h2 className="ed-section-title">Sales and Marketing Courses</h2>
+                  </div>  
+            <div className="grid grid-cols-2 md:grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px]">
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cs1.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 52000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Bachelor of Vocational in Marketing and Sales with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cs2.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                   Zero Day Placement Diploma in Marketing & Sales
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cs3.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                   PG Diploma in Marketing & Sales with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cs4.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 75000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Master of Vocational in Marketing & Sales with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cs5.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 75000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  MBA in Marketing & Sales with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cs6.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 52000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Bachelor of Business Administration in Marketing & Sales with Job Assistance and Mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+                <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
+                </div>
+              </div>
+            </div>
+            </div>
+            )}
+            {/* Web and Software Development Courses Section */}
+
+            {selectedCategory === "Web and Software Development" && (
+            <div>
+                    <div className="text-center mb-[21px]">
+                      <h2 className="ed-section-title">Web and Software Development Courses</h2>
+                    </div>
+            <div className="grid grid-cols-2 md:grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px]">
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cw1.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Zero day placement Diploma in Web Designing
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cw2.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 77000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Master of Vocational in Web Development with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cw3.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 52000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Bachelor of Vocational in Web Development with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cw4.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 27000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                   MERN Stack Internship Program
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cw5.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  PG Diploma in Web Development with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cw6.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 77000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Master of Vocational In Software Development with Job Assistance and Mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+                <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
+                </div>
+              </div>
+            </div>
+            </div>
+            )}
+
+            {/* Human Resource and Administration Courses Section */}
+
+            {selectedCategory === "Human Resource and Administration" && (
+            <div>
+                  <div className="text-center mb-[21px]">
+                    <h2 className="ed-section-title">Human Resource and Administration Courses</h2>
+                 </div>
+            <div className="grid grid-cols-2 md:grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px]">
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/ch1.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 77000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Master of Vocational in Human Resource and Administration with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/ch2.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Zero day placement MBA in Human Resource and Administration
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/ch3.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                    PG Diploma in Human Resource and Administration with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/ch4.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                    Zero Day Placement Diploma in Human Resource and Administration
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/ch5.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 52000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                   Bachelor of Vocational in Human Resource And Administration with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/ch6.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 52000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Bachelor of Business Administration in Human Resource And Administration with Job Assistance and Mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+                <div className="flex flex-wrap gap-x-[20px] gap-y-[15px] justify-between items-center border-t border-[#E5E5E5] pt-[24px] mt-[24px]">
+                </div>
+              </div>
+            </div>
+            </div>
+            )}
+
+            {/* Graphic & Animation Courses Section */}
+
+            {selectedCategory === "Graphic & Animation" && (
+             <div> 
+               <div className="text-center mb-[21px]">
+                <h2 className="ed-section-title">Graphic & Animation Courses</h2>
+               </div>
+             
+            <div className="grid grid-cols-2 md:grid-cols-2 xxs:grid-cols-1 gap-[30px] lg:gap-[20px]">              
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cg1.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                    Diploma in UI/UX Design with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cg2.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 52000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                  Bachelor of Vocational in Animation and Film Making with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+                {/* course footer */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cg3.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 27000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                   Print & Publishing (Graphic Designing) with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+              {/* single course card */}
+              <div className="ed-2-single-course mix personal-skill border border-[#e5e5e5] rounded-[10px] p-[20px] group">
+                {/* course image  */}
+                <div className="relative overflow-hidden rounded-[10px] mb-[24px]">
+                  <img
+                    src="assets/img/cg4.jpg"
+                    alt="Course Image"
+                    className="aspect-[330/223] w-full object-cover group-hover:scale-110"
+                  />
+                </div>
+                {/* course infos */}
+                <div className="flex justify-between items-center mb-[16px]">
+                  <span className="inline-flex items-center justify-center border border-[#e5e5e5] px-[10px] h-[33px] rounded-[6px] font-medium text-[#808080] text-[14px]">
+                    Price
+                  </span>
+                  <span className="text-edpurple font-semibold text-[20px]">
+                    Rs 92000
+                  </span>
+                </div>
+                {/* course title */}
+                <h5 className="font-semibold text-[20px] text-edblue mb-[23px]">
+                  <a href="/courseDetail" className="hover:text-edpurple">
+                    Diploma in Digital Advertising and Designing with job assistance and mentorship
+                  </a>
+                </h5>
+                {/* course stats */}
+              </div>
+            </div>
+            </div>
+            )}
+
             {/* pagination */}
-            <div className="flex items-center gap-[20px] pt-[60px] justify-center text-[16px]">
+            {/* <div className="flex items-center gap-[20px] pt-[60px] justify-center text-[16px]">
               <a href="#" className="hover:text-edpurple">
                 <i className="fa-solid fa-arrow-left-long" />
               </a>
@@ -406,11 +1272,51 @@ const CourseFilter = () => {
               <a href="#" className="hover:text-edpurple">
                 <i className="fa-solid fa-arrow-right-long" />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
     </div>
+            {/* CTA SECTION START */}
+            <section className="ed-2-cta overflow-hidden bg-edpurple pt-[15px] md:pt-[40px] relative z-[1] before:absolute before:inset-0 before:bg-[url(../assets/img/cta-2-vector.png)] before:bg-center before:bg-no-repeat before:bg-cover before:-z-[1]" style={{marginBottom:'50px',height:'20%'}}>
+      <div className="mx-[19.7%] xxxl:mx-[14.7%] xxl:mx-[9.7%] xl:mx-[3.2%] md:mx-[15px]">
+        <div className="flex md:flex-col gap-y-[15px] items-center justify-between">
+          {/* text */}
+          <div className="max-w-[600px] md:max-w-full shrink-0 relative">
+            <h3 className="font-semibold text-[36px] sm:text-[32px] xxs:text-[28px] text-white leading-[1.4] mb-[41px] xxs:mb-[31px]">
+              Download The App Pure Professional App
+            </h3>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.isoftinc.pure_professional"
+              className="ed-btn !h-[56px] !bg-white !text-black gap-[10px] hover:!bg-edyellow hover:!text-edblue"
+            >
+              Download{" "}
+              <span className="icon">
+                <i className="fa-solid fa-arrow-right-long" />
+              </span>
+            </a>
+            {/* vector */}
+            <img
+              src="assets/img/cta-2-txt-vector.svg"
+              alt="vector"
+              className="absolute bottom-[10px] left-[37%] xs:left-[75%]"
+            />
+          </div>
+          {/* image */}
+          <div className="mr-[40px] lg:mr-0 relative z-[1] shrink-0">
+          <a href='https://play.google.com/store/apps/details?id=com.isoftinc.pure_professional'>  
+            <img  style={{marginTop:'10px',marginBottom:'30%'}}
+            src = "assets/img/DownloadAppImage.jpg"
+            //src="assets/img/cta-2-img.png" 
+            alt="image" />
+            {/* vector */}
+            </a>  
+            <div className="aspect-square w-[386px] border-[57px] border-edyellow rounded-full absolute bottom-0 right-[25%] translate-y-[50%] -z-[1]" />
+          </div>
+        </div>
+      </div>
+    </section>
+    {/* CTA SECTION END */}
   </main>
 </>
 

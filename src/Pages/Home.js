@@ -718,13 +718,13 @@ return (
           {/* text */}
           <div className="max-w-[600px] md:max-w-full shrink-0 relative">
             <h3 className="font-semibold text-[36px] sm:text-[32px] xxs:text-[28px] text-white leading-[1.4] mb-[41px] xxs:mb-[31px]">
-              15% Offer For All Categories Courses
+              Download The App Pure Professional App
             </h3>
             <a
-              href="course-grid.html"
+              href="https://play.google.com/store/apps/details?id=com.isoftinc.pure_professional"
               className="ed-btn !h-[56px] !bg-white !text-black gap-[10px] hover:!bg-edyellow hover:!text-edblue"
             >
-              Join Courses{" "}
+              Download{" "}
               <span className="icon">
                 <i className="fa-solid fa-arrow-right-long" />
               </span>
@@ -738,8 +738,13 @@ return (
           </div>
           {/* image */}
           <div className="mr-[40px] lg:mr-0 relative z-[1] shrink-0">
-            <img src="assets/img/cta-2-img.png" alt="image" />
+          <a href='https://play.google.com/store/apps/details?id=com.isoftinc.pure_professional'>  
+            <img  style={{marginTop:'10px',marginBottom:'30%'}}
+            src = "assets/img/DownloadAppImage.jpg"
+            //src="assets/img/cta-2-img.png" 
+            alt="image" />
             {/* vector */}
+            </a>  
             <div className="aspect-square w-[386px] border-[57px] border-edyellow rounded-full absolute bottom-0 right-[25%] translate-y-[50%] -z-[1]" />
           </div>
         </div>
