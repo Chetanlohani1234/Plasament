@@ -1,7 +1,13 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './tieup.css';
 
 const PartnerAndTieUps = () => {
+  
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
+  const openForm = () => setIsFormOpen(true);
+  const closeForm = () => setIsFormOpen(false);
+
   return (
     <div className="partner-container">
       <img
@@ -52,7 +58,56 @@ const PartnerAndTieUps = () => {
             </ul>
         </div>
 
-      </div>   
+      </div>
+
+
+      <button className="earn-us-button" onClick={openForm}>
+        Earn Us
+      </button>
+
+      {/* Popup Form */}
+      {isFormOpen && (
+        <div className="form-popup">
+          <div className="form-popup-content">
+            <h2>Fill Your Details</h2>
+            <form className="earn-form">
+              <div className="form-group">
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required />
+              </div>
+              <div className="form-group">
+                <label>Mobile Number</label>
+                <input type="text" placeholder="Enter your mobile number" required />
+              </div>
+              <div className="form-group">
+                <label>State</label>
+                <input type="text" placeholder="Enter your state" required />
+              </div>
+              <div className="form-group">
+                <label>City</label>
+                <input type="text" placeholder="Enter your city" required />
+              </div>
+              <div className="form-group">
+                <label>Profession</label>
+                <input type="text" placeholder="Enter your profession" required />
+              </div>
+              <div className="form-group">
+                <label>Additional Information</label>
+                <textarea placeholder="Enter additional information" />
+              </div>
+              <div className="form-buttons">
+                <button type="submit" className="submit-button">
+                  Submit
+                </button>
+                <button type="button" className="cancel-button" onClick={closeForm}>
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+ 
          
 
       <div className="contact-section">
