@@ -1,323 +1,173 @@
-/* Container for the sections */
+/* General container for all sections */
 .container {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    width: 100%;
-    flex-wrap: wrap; /* Make sections wrap on smaller screens */
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  gap: 20px; /* Space between sections */
+}
+
+/* Style for each section */
+.section {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific width for Section 1 */
+.qna-section {
+  flex: 1; /* Takes 1 part of the available space */
+  max-width: 300px; /* Optional: max width to limit size */
+}
+
+/* Wider Section 2 */
+.feed-section {
+  flex: 2; /* Takes 2 parts of the available space */
+  max-width: 600px; /* Optional: max width for control */
+}
+
+/* Specific width for Section 3 */
+.third-section {
+  flex: 1; /* Takes 1 part of the available space */
+  max-width: 300px; /* Optional: max width to limit size */
+}
+
+/* Common styles for form inputs */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-group label {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+/* Feed Section Controls */
+.feed-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.feed-controls input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  flex-grow: 1; /* Make search input grow */
+  margin-right: 10px; /* Space between input and button */
+}
+
+.add-question-btn {
+  background-color: #00a7ac;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Filter Dropdown */
+.filter-dropdown {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* Feed Content */
+.feed-content .content-section {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Question and Answer */
+.question-answer {
+  margin-bottom: 15px;
+}
+
+/* Read More button */
+.read-more {
+  background-color: transparent;
+  border: none;
+  color: #00a7ac;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Like, Dislike, Share Buttons */
+.actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Add Answer Section */
+.add-answer {
+  margin-top: 20px;
+}
+
+.add-answer input[type="text"] {
+  margin-bottom: 10px; /* Space between input and button */
+}
+
+.add-answer button {
+  background-color: #00a7ac;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Third Section - Most Viewed Questions */
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.qa-container .qa-pair {
+  margin-bottom: 10px;
+}
+
+.qa-container .question {
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  
-  /* Common styles for each section */
+
   .section {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
+    max-width: none;
+    width: 100%;
+    margin-bottom: 20px;
   }
-  
-  /* First and Third Q&A sections */
-  .qna-section {
-    background-color: #ffffff;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  
-  /* Feed section */
-  .feed-section {
-    background-color: #ffffff;
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  /* Feed controls */
+
   .feed-controls {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    max-width: 800px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .feed-search, .add-question-btn, .filter-dropdown {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  
-  .feed-search {
-    flex: 1;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #000000;
-  }
-  
-  .add-question-btn {
-    font-size: 14px;
-    text-align: center;
-    background-color: #2ecc71;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    padding: 10px;
-  }
-  
-  .filter-dropdown {
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #000000;
-    color: #000000;
-    width: 100%;
-  }
-  
-  .filter-dropdown option {
-    color: #000000;
-  }
-  
-  /* Feed content */
-  .feed-content {
-    margin: 20px;
-  }
-  
-  .content-section {
-    background-color: #f8f9fa;
-    border: 1px solid #ddd;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    width: 100%;
-  }
-  
-  .button-group {
-    display: flex;
-    margin-bottom: 10px;
-    justify-content: space-between;
-  }
-  
-  .question-answer {
-    margin-bottom: 15px;
-  }
-  
-  .answer {
-    margin-top: 5px;
-    color: #000000;
-  }
-  
-  .read-more {
-    color: #007bff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding-left: 5px;
-  }
-  
-  .read-more:hover {
-    text-decoration: underline;
-  }
-  
-  /* Actions (Like, Dislike, Share) */
-  .actions {
-    display: flex;
-    justify-content: flex-start;
-    gap: 15px;
-  }
-  
-  .actions button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-  }
-  
-  .actions button:hover {
-    color: #007bff;
-  }
-  
-  /* Buttons */
-  button {
-    padding: 8px 12px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #2980b9;
-  }
-  
-  /* Third Section */
-  .third-section {
-    background-color: #ffffff;
-    flex: 1;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-top: 20px;
   }
-  
-  /* First div in the third section */
-  .first-div {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .image-part img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  
-  .info-part {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-  }
-  
-  .button-container {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .btn {
-    background-color: #2ecc71;
-    padding: 10px 15px;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Second div in the third section */
-  .second-div {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    color: black;
-  }
-  
-  .title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 20px;
-  }
-  
-  .qa-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .qa-part {
-    flex: 1;
-  }
-  
-  .qa-pair {
-    margin-bottom: 15px;
-  }
-  
-  .question {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #000000;
-  }
-  
-  .answer {
-    font-size: 16px;
-  }
-  
-  /* Label */
-  .labelName {
-    font-size: 15px;
-    color: #000000;
-  }
-  
-  /* Media Queries */
-  @media (max-width: 1200px) {
-    .feed-controls {
-      flex-direction: column;
-    }
-  
-    .container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .feed-section {
-      width: 100%;
-    }
-  
-    .third-section {
-      width: 100%;
-      margin-top: 10px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .feed-search, .add-question-btn, .filter-dropdown {
-      width: 100%;
-    }
-  
-    .button-group {
-      flex-wrap: wrap;
-    }
-  
-    .first-div {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .image-part img {
-      width: 80px;
-      height: 80px;
-    }
-  
-    .qa-container {
-      flex-direction: column;
-    }
-  
-    .qa-part {
-      width: 100%;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .title {
-      font-size: 18px;
-    }
-  
-    .question {
-      font-size: 16px;
-    }
-  
-    .answer {
-      font-size: 14px;
-    }
-  
-    button {
-      padding: 6px 8px;
-      font-size: 14px;
-    }
-  
-    .btn {
-      padding: 8px 12px;
-      font-size: 14px;
-    }
-  }
-  
+}

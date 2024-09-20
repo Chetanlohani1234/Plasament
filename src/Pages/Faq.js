@@ -227,12 +227,13 @@ const Faq = () => {
       <div className="section feed-section">
         <div className="feed-controls">
           <input type="text" placeholder="Search..." className="feed-search" />
-          <button className="add-question-btn">Add Question</button>
+          
           <select className="filter-dropdown">
             <option value="filter" style={{color:'black'}}>Filter</option>
             <option value="recent" style={{color:'black'}}>Most Recent</option>
             <option value="popular" style={{color:'black'}}>Most Popular</option>
           </select>
+          <button className="add-question-btn" style={{height:'40px',fontSize:'10px'}}>Add Question</button>
         </div>
 
         <div className="feed-content">
