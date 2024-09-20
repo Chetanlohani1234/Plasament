@@ -1,0 +1,107 @@
+.jobs-placement-container {
+    padding: 20px;
+    background: #f9f9f9; /* Light background for contrast */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+}
+
+.intro-text {
+    margin-bottom: 20px; /* Space below the introductory text */
+    text-align: center; /* Center text for better aesthetics */
+}
+
+h1 {
+    color: #2c3e50; /* Dark color for main heading */
+    font-size: 2rem; /* Larger font size for the main heading */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+h2 {
+    color: #34495e; /* Slightly lighter color for subheading */
+    margin-top: 20px; /* Space above the subheading */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row; /* Default to row for larger screens */
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.screenshot-container {
+    flex: 1; /* Take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 400px;
+}
+
+.screenshot {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.text-container {
+    height: 400px;
+    flex: 1; /* Take up equal space */
+    padding: 20px;
+    background: #274d9b; /* Background for content */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-left: 10px; /* Space between image and content */
+}
+
+.classJobs {
+    text-align: center;
+    color: #00a7ac;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem; /* Use responsive units */
+}
+
+.classJobsPara {
+    color: bisque;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1.2rem; /* Use responsive units */
+    margin-top: 40px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column; /* Stack the image and text on smaller screens */
+        margin-top: 10px;
+    }
+
+    .text-container {
+        margin-left: 0; /* Remove margin on small screens */
+        height: auto; /* Allow text container to adjust height */
+    }
+
+    .screenshot-container {
+        height: auto; /* Allow screenshot container to adjust height */
+    }
+
+    .classJobs {
+        font-size: 1.5rem; /* Smaller font size on smaller screens */
+    }
+
+    .classJobsPara {
+        font-size: 1rem; /* Smaller font size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .classJobs {
+        font-size: 1.2rem; /* Further reduce font size for mobile */
+    }
+
+    .classJobsPara {
+        font-size: 0.9rem; /* Further reduce font size for mobile */
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,101 @@
+.about-title {
+    text-align: center;
+    color: #2980b9;
+    margin: 30px 0 10px; /* Margin for spacing */
+  }
+  
+  .about-description {
+    padding: 20px;
+    background-color: #f4f4f4; /* Background color for the about section */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px; /* Spacing below the section */
+  }
+  
+  .about-description p {
+    margin: 5px 0; /* Margin between paragraphs */
+  }
+
+.university-container {
+    display: flex; /* Use flexbox for layout */
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .sidebar {
+    width: 25%; /* Sidebar width */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky; /* Stick the sidebar on scroll */
+    top: 20px; /* Offset from the top */
+  }
+  
+  .sidebar-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .ranking-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+  }
+  
+  .ranking-list li {
+    margin: 10px 0; /* Spacing between list items */
+    font-weight: bold; /* Make rankings bold */
+    color: #2980b9; /* Color for rankings */
+  }
+  
+  .main-content {
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+  }
+  
+  .university-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .video-container {
+    margin-bottom: 30px;
+  }
+  
+  .course-title {
+    text-align: center;
+    color: #2980b9;
+    margin-bottom: 10px;
+  }
+  
+  .course-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  .course-table th,
+  .course-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .course-table th {
+    background-color: #2980b9;
+    color: white;
+  }
+  
+  .course-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .course-table tr:hover {
+    background-color: #f1c40f; /* Highlight on hover */
+    color: #000; /* Change text color on hover */
+  }
+  

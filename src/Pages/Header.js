@@ -34,19 +34,16 @@ const Header = () => {
             <a href='/course-filter' role="button">Explore Courses</a>
           </li>
           <li>
-            <a href="/collegeDetail">Top Colleges</a>
+            <a href="/clglist">Top Colleges</a>
           </li>
           <li className="has-sub-menu relative">
             <a role="button">More</a>
             <ul className="ed-header-submenu" style={{textAlign:"left"}}>
               <li>
-                <a href="/collegeDetail">Tie Up/Partner</a>
+                <a href="/tieup">Tie Up/Partner</a>
               </li>
               <li>
-                <a href="/collegeDetail">Jobs & Placement</a>
-              </li>
-              <li>
-                <a href="/collegeDetail">Add Your College/University</a>
+                <a href="/jobPlacement">Jobs & Placement</a>
               </li>
               <li>
                 <a href="/about">About Us</a>
@@ -58,7 +55,7 @@ const Header = () => {
                 <a href="/blog">Blogs</a>
               </li>
               <li>
-                <a href="/collegeDetail">Q&As</a>
+                <a href="/faq">Q&As</a>
               </li>
               <li>
                 <a href="/collegeDetail">Free Resources</a>

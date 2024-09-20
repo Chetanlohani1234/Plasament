@@ -1,0 +1,104 @@
+.college-container {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Light background for contrast */
+  }
+  
+  .page-title {
+    margin-bottom: 30px;
+    color: #2980b9;
+    font-size: 2em; /* Larger title font size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  }
+  
+  .college-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Space between items */
+    padding: 0 10px; /* Horizontal padding */
+  }
+  
+  .college-item {
+    position: relative; /* Allows absolute positioning of the background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Deeper shadow for a lifted effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    overflow: hidden; /* Prevents content overflow */
+  }
+  
+  .college-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../public/assets/img/uni1.png'); /* Replace with each college's image URL */
+    background-size: cover; /* Cover the entire item */
+    background-position: center; /* Center the image */
+    opacity: 0.3; /* Adjust opacity for transparency */
+    z-index: 0; /* Send it to the back */
+  }
+  
+  .college-item:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+  
+  .college-logo {
+    width: 100px; /* Set logo width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    position: relative; /* Position above the background image */
+    z-index: 1; /* Ensure it appears above the background */
+  }
+  
+  .college-name {
+    font-size: 1.5em; /* Larger font size for college names */
+    color: #000000; /* White text color for contrast */
+    margin-top: 10px; /* Spacing above the college name */
+    position: relative; /* Position above the background image */
+    z-index: 1; /* Ensure it appears above the background */
+  }
+
+  .college-course {
+    font-size: 1.5em; /* Larger font size for college names */
+    color: #000000; /* White text color for contrast */
+    position: relative; /* Position above the background image */
+    z-index: 1; /* Ensure it appears above the background */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .college-grid {
+      grid-template-columns: repeat(3, 1fr); /* Three columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .college-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on small screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .college-grid {
+      grid-template-columns: 1fr; /* One column on extra small screens */
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .college-name {
+      font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+    .college-course{
+        font-size: 1.2em;
+    }
+  
+    .college-logo {
+      width: 80px; /* Adjust logo width for smaller screens */
+    }
+  }
+  

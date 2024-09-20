@@ -11,6 +11,11 @@ import Header from './Pages/Header';
 import Contact from './Pages/Contact';
 import CourseDetail from './Pages/CourseDetail';
 import Blog from './Pages/Blog';
+import Faq from './Pages/Faq';
+import JobsPlacement from './Pages/JobPlacement';
+import PartnerTieUp from './Pages/Tieup';
+import UniversityPage from './Pages/University';
+import CollegePage from './Pages/TopCollege';
 
 function App() {
   return (
@@ -25,8 +30,16 @@ function App() {
        <Route path='/contact' element = {<Contact />}/>
        <Route path='/courseDetail' element = {<CourseDetail/>}/>
        <Route path='/blog' element={<Blog/>}/>
+       <Route path='/faq' element={<Faq/>}/>
+       <Route path='/jobPlacement' element={<JobsPlacement/>}/>
+       <Route path='/tieup' element={<PartnerTieUp/>}/>
+       <Route path='/university' element={<UniversityPage/>}/>
+       <Route path='/clglist' element={<CollegePage/>}/>
+      
+
+
      </Routes>
-     <Footer/>
+     <Footer/> 
      </BrowserRouter>
     </>
   );
