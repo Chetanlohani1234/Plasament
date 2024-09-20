@@ -22,6 +22,7 @@ const UniversityPage = () => {
   ];
 
   return (
+    <div>
     <div className="university-container">
       {/* <div className="sidebar">
         <h2 className="sidebar-title">College Rankings</h2>
@@ -74,9 +75,11 @@ const UniversityPage = () => {
           </tbody>
         </table>
 
-        <br/><br/>
-            {/* CTA SECTION START */}
-    <section className="ed-2-cta overflow-hidden bg-edpurple pt-[15px] md:pt-[40px] relative z-[1] before:absolute before:inset-0 before:bg-[url(../assets/img/cta-2-vector.png)] before:bg-center before:bg-no-repeat before:bg-cover before:-z-[1]">
+      </div>
+    </div>
+
+        {/* CTA SECTION START */}
+        <section className="ed-2-cta overflow-hidden bg-edpurple pt-[15px] md:pt-[40px] relative z-[1] before:absolute before:inset-0 before:bg-[url(../assets/img/cta-2-vector.png)] before:bg-center before:bg-no-repeat before:bg-cover before:-z-[1]">
       <div className="mx-[19.7%] xxxl:mx-[14.7%] xxl:mx-[9.7%] xl:mx-[3.2%] md:mx-[15px]">
         <div className="flex md:flex-col gap-y-[15px] items-center justify-between">
           {/* text */}
@@ -115,9 +118,10 @@ const UniversityPage = () => {
       </div>
     </section>
     {/* CTA SECTION END */}
+    <br/><br/>
 
-      </div>
     </div>
+
   );
 };
 

@@ -16,6 +16,7 @@ import JobsPlacement from './Pages/JobPlacement';
 import PartnerTieUp from './Pages/Tieup';
 import UniversityPage from './Pages/University';
 import CollegePage from './Pages/TopCollege';
+import SingleBlog from './Pages/SingleBlog';
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
        <Route path='/tieup' element={<PartnerTieUp/>}/>
        <Route path='/university' element={<UniversityPage/>}/>
        <Route path='/clglist' element={<CollegePage/>}/>
+       <Route path='/singleBlog' element={<SingleBlog/>}/>
+
       
 
 

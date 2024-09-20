@@ -1423,7 +1423,7 @@ return (
                 </div>
               </div>
               <h5 className="font-medium text-[20px]">
-                <a href="/blog" className="hover:text-edpurple">
+                <a href="/singleBlog" className="hover:text-edpurple">
                   Collaboratively pontificate bleeding edge resources with
                   inexpensive methodologies
                 </a>
@@ -1465,7 +1465,7 @@ return (
                   </div>
                 </div>
                 <h5 className="font-medium text-[20px] mb-[17px]">
-                  <a href="/blog" className="hover:text-edpurple">
+                  <a href="/singleBlog" className="hover:text-edpurple">
                     Collaboratively pontificate bleedi edge resources
                   </a>
                 </h5>
@@ -1511,7 +1511,7 @@ return (
                   </div>
                 </div>
                 <h5 className="font-medium text-[20px] mb-[17px]">
-                  <a href="/blog" className="hover:text-edpurple">
+                  <a href="/singleBlog" className="hover:text-edpurple">
                     Collaboratively pontificate bleedi edge resources
                   </a>
                 </h5>
