@@ -42,6 +42,9 @@ const Header = () => {
                 <a href="/tieup">Tie Up/Partner</a>
               </li>
               <li>
+                <a href="/ai">AI Integration</a>
+              </li>
+              <li>
                 <a href="/jobPlacement">Jobs & Placement</a>
               </li>
               <li>

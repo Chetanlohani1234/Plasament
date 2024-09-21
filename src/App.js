@@ -17,6 +17,7 @@ import PartnerTieUp from './Pages/Tieup';
 import UniversityPage from './Pages/University';
 import CollegePage from './Pages/TopCollege';
 import SingleBlog from './Pages/SingleBlog';
+import Integration from './Pages/Integration';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
        <Route path='/university' element={<UniversityPage/>}/>
        <Route path='/clglist' element={<CollegePage/>}/>
        <Route path='/singleBlog' element={<SingleBlog/>}/>
+       <Route path='/ai' element={<Integration/>}/>
 
       
 
