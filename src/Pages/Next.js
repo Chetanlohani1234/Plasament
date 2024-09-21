@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Integration.css'; // CSS for styling
 
 // Image grid component
-const Integration = () => {
+const Next = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const navigate = useNavigate();
   const images = [
@@ -23,13 +23,16 @@ const Integration = () => {
   };
 
   const handleNext = () => {
-    navigate('/next');
+    navigate('/form');
   };
 
+  const handleBack = () => {
+    navigate('/ai');
+  }
 
   return (
     <div className="image-grid-container">
-        <h1 className='gridh1'>Which Degree are you interested in?</h1>
+        <h1 className='gridh1'>Which Course would you like to purpose?</h1>
       <div className="image-grid">
         {images.map((img, index) => (
           <div 
@@ -42,11 +45,16 @@ const Integration = () => {
           </div>
         ))}
       </div>
- 
+      {/* {selectedImage && (
         <button className="next-button" onClick={handleNext}>Next</button>
-      
+      )} */}
+            {/* Buttons Outside of Form */}
+            <div className="buttons">
+        <button type="button" className="next-button" onClick={handleBack}>Back</button>
+        <button type="button" className="next-button" onClick={handleNext}>Next</button>
+      </div>
     </div>
   );
 };
 
-export default Integration;
+export default Next;

@@ -1,7 +1,17 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './TopCollege.css';
 
 const CollegePage = () => {
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    if (activeIndex === index) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
+  };
 
           // Array of university items
   const universities = [
@@ -42,6 +52,61 @@ const CollegePage = () => {
         ))}
       </div>
       </a>  
+
+      <div className="faq-container">
+      <h1>Let's Clear Up Some Doubts</h1>
+
+      <div className={`faq-item ${activeIndex === 0 ? 'active' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(0)}>
+        What is the procedure for seeking admission to postgraduate programs in University?
+        </div>
+        {activeIndex === 0 && (
+          <div className="faq-answer">
+            For the academic year 2024-25, admission to all PG programs of University of Delhi (UoD) will be done through Common University Entrance Test (Postgraduate)- 2024 (CUET(PG)-2024) only. For admissions, candidate must
+          </div>
+        )}
+      </div>
+
+      <div className={`faq-item ${activeIndex === 1 ? 'active' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(1)}>
+        What is the procedure for seeking admission to postgraduate programs in University?
+          
+        </div>
+        {activeIndex === 1 && (
+          <div className="faq-answer">
+            For the academic year 2024-25, admission to all PG programs of University of Delhi (UoD) will be done through Common University Entrance Test (Postgraduate)- 2024 (CUET(PG)-2024) only. For admissions, candidate must
+          </div>
+        )}
+      </div>
+
+      <div className={`faq-item ${activeIndex === 2 ? 'active' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(2)}>
+        What is the procedure for seeking admission to postgraduate programs in University?
+          
+        </div>
+        {activeIndex === 2 && (
+          <div className="faq-answer">
+            For the academic year 2024-25, admission to all PG programs of University of Delhi (UoD) will be done through Common University Entrance Test (Postgraduate)- 2024 (CUET(PG)-2024) only. For admissions, candidate must:
+          </div>
+        )}
+      </div>
+
+      <div className={`faq-item ${activeIndex === 3 ? 'active' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(3)}>
+        What is the procedure for seeking admission to postgraduate programs in University?
+          
+        </div>
+        {activeIndex === 3 && (
+          <div className="faq-answer">
+            For the academic year 2024-25, admission to all PG programs of University of Delhi (UoD) will be done through Common University Entrance Test (Postgraduate)- 2024 (CUET(PG)-2024) only. For admissions, candidate must.
+          </div>
+        )}
+      </div>
+
+      {/* Add more questions and answers here as needed */}
+    </div>
+
+
     </div>
   );
 };

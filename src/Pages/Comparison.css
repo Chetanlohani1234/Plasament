@@ -1,0 +1,118 @@
+.comparison-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    border: 1px solid #ccc; /* Optional border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .text-section {
+    flex: 1; /* Take up one side */
+    padding: 20px; /* Spacing inside the text section */
+    background-color: #f9f9f9; /* Light background for text */
+  }
+  
+  .text-section h1 {
+    margin-bottom: 15px; /* Space below the heading */
+    color: blue; /* Darker color for heading */
+  }
+  
+  .text-section p {
+    line-height: 1.6; /* Better readability */
+    color: #555; /* Darker gray for text */
+  }
+  
+  .image-section {
+    flex: 1; /* Take up the other side */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center vertically */
+    background-color: #fff; /* White background for image */
+  }
+  
+  .image-section img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for image */
+  }
+  
+  .slider-container {
+    max-width: 1200px; /* Max width for the slider */
+    margin: 0 auto; /* Center the slider */
+    padding: 20px; /* Padding around the slider */
+    text-align: center; /* Center-align text */
+  }
+  
+  .slider-container h1 {
+    font-size: 2.5rem; /* Title size */
+    color: #007BFF; /* Blue color */
+    margin-bottom: 10px; /* Space below title */
+  }
+  
+  .slider-container h2 {
+    font-size: 1.5rem; /* Subtitle size */
+    color: #555; /* Dark gray color */
+    margin-bottom: 20px; /* Space below subtitle */
+  }
+  
+  .review-box {
+    position: relative;
+    background-color: #fff; /* White background for boxes */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s; /* Smooth scale transition */
+  }
+  
+  .review-box:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+  }
+  
+  .logo {
+    width: 80px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space below the logo */
+  }
+  
+  .review-box h2 {
+    margin: 10px 0; /* Spacing for the name */
+    font-size: 1.6rem; /* Font size for name */
+    color: #007BFF; /* Blue color for name */
+  }
+  
+  .review-box h3 {
+    margin: 5px 0; /* Spacing for company name */
+    font-size: 1.2rem; /* Font size for company name */
+    color: #555; /* Gray color for company names */
+  }
+  
+  .review-box p {
+    color: #333; /* Dark color for reviews */
+    line-height: 1.5; /* Better readability */
+    font-size: 1rem; /* Font size for reviews */
+    margin-top: 10px; /* Space above the review text */
+  }
+  
+  /* Auto-scroll styles */
+  .auto-scroll {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .auto-scroll img {
+    margin-top: 50px;
+    width: 50%; /* Image width */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the slide without stretching */
+  }
+  
+  .auto-scroll .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  

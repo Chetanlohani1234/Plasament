@@ -18,6 +18,8 @@ import UniversityPage from './Pages/University';
 import CollegePage from './Pages/TopCollege';
 import SingleBlog from './Pages/SingleBlog';
 import Integration from './Pages/Integration';
+import Next from './Pages/Next';
+import Form from './Pages/Form';
 
 function App() {
   return (
@@ -39,7 +41,8 @@ function App() {
        <Route path='/clglist' element={<CollegePage/>}/>
        <Route path='/singleBlog' element={<SingleBlog/>}/>
        <Route path='/ai' element={<Integration/>}/>
-
+       <Route path='/next' element={<Next/>}/>
+       <Route path='/form' element={<Form/>}/>
       
 
 

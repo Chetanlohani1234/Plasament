@@ -1,6 +1,30 @@
 import React,{useState} from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'; 
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+//import { Autoplay, Pagination } from 'swiper';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+//import 'swiper/swiper-bundle.min.css';
+
+
+
+//import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import './Comparison.css'
 
 const CourseFilter = () => {
+
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    if (activeIndex === index) {
+      setActiveIndex(null);
+    } else {
+      setActiveIndex(index);
+    }
+  };
+
   const [selectedCategory, setSelectedCategory] = useState("Accounts and Taxation");
   
   const handleCategoryChange = (event) => {
@@ -1277,6 +1301,111 @@ const CourseFilter = () => {
         </div>
       </div>
     </div>
+
+    <div className="comparison-container">
+      <div className="text-section">
+        <h1>Why This College?</h1>
+        <p>
+          This college offers a unique blend of academic excellence and extracurricular opportunities. 
+          Our experienced faculty, state-of-the-art facilities, and vibrant campus life create an ideal 
+          environment for personal and professional growth.
+        </p>
+        <h1>Expert Conseling</h1>
+        <p>
+          This college offers a unique blend of academic excellence and extracurricular opportunities. 
+          Our experienced faculty, state-of-the-art facilities, and vibrant campus life create an ideal 
+          environment for personal and professional growth.
+        </p>
+        <h1>Placement Support</h1>
+        <p>
+          This college offers a unique blend of academic excellence and extracurricular opportunities. 
+          Our experienced faculty, state-of-the-art facilities, and vibrant campus life create an ideal 
+          environment for personal and professional growth.
+        </p>
+        <h1>Peer Interaction</h1>
+        <p>
+          This college offers a unique blend of academic excellence and extracurricular opportunities. 
+          Our experienced faculty, state-of-the-art facilities, and vibrant campus life create an ideal 
+          environment for personal and professional growth.
+        </p>
+      </div>
+      <div className="image-section">
+        <img src="assets/img/compare.webp" alt="College Comparison" />
+      </div>
+    </div>
+
+    <div className="slider-container">
+      <h1>WHAT STUDENTS SAY</h1>
+      <h2>Student Reviews About Pure Professional</h2>
+      <Swiper 
+   spaceBetween={30}
+   slidesPerView={4}
+   loop={true}
+   autoplay={{
+     delay: 300,
+     disableOnInteraction: false,
+   }}
+   //navigation
+   //pagination={{ clickable: true }}
+   //modules={[Autoplay, Pagination]}
+>
+
+     
+        <SwiperSlide>
+          <div className="review-box">
+            <img src="assets/img/u2.webp" alt="College Logo" className="logo" />
+
+            <h2>John Doe</h2>
+            <h3>Tech Innovations</h3>
+  
+            <p>This college has a great environment for learning and the faculty is very supportive!</p>
+          </div>
+        </SwiperSlide>
+        
+        <SwiperSlide>
+          <div className="review-box">
+            <img src="assets/img/u3.webp" alt="College Logo" className="logo" />
+
+            <h2>Jane Smith</h2>
+            <h3>Creative Solutions</h3>
+
+            <p>I loved my experience here. The campus life is vibrant and full of opportunities.</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="review-box">
+            <img src="assets/img/u4.webp" alt="College Logo" className="logo" />
+   
+            <h2>Alice Johnson</h2>
+            <h3>Global Enterprises</h3>
+
+            <p>The courses offered are very insightful, and the facilities are top-notch.</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="review-box">
+            <img src="assets/img/u5.webp" alt="College Logo" className="logo" />
+
+            <h2>Mark Wilson</h2>
+            <h3>Future Tech</h3>
+
+            <p>I had a fantastic time studying here, and I made lifelong friends.</p>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="review-box">
+            <img src="assets/img/u5.webp" alt="College Logo" className="logo" />
+            <h2>Mark Wilson</h2>
+            <h3>Future Tech</h3>
+            <p>I had a fantastic time studying here, and I made lifelong friends.</p>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+    </div>
+
             {/* CTA SECTION START */}
             <section className="ed-2-cta overflow-hidden bg-edpurple pt-[15px] md:pt-[40px] relative z-[1] before:absolute before:inset-0 before:bg-[url(../assets/img/cta-2-vector.png)] before:bg-center before:bg-no-repeat before:bg-cover before:-z-[1]" style={{marginBottom:'50px',height:'20%'}}>
       <div className="mx-[19.7%] xxxl:mx-[14.7%] xxl:mx-[9.7%] xl:mx-[3.2%] md:mx-[15px]">
@@ -1317,6 +1446,60 @@ const CourseFilter = () => {
       </div>
     </section>
     {/* CTA SECTION END */}
+
+    <div className="faq-container">
+      <h1>Let's Clear Up Some Doubts</h1>
+
+      <div className={`faq-item ${activeIndex === 0 ? 'active' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(0)}>
+        What is the procedure for seeking admission to postgraduate programs in University?
+        </div>
+        {activeIndex === 0 && (
+          <div className="faq-answer">
+            For the academic year 2024-25, admission to all PG programs of University of Delhi (UoD) will be done through Common University Entrance Test (Postgraduate)- 2024 (CUET(PG)-2024) only. For admissions, candidate must
+          </div>
+        )}
+      </div>
+
+      <div className={`faq-item ${activeIndex === 1 ? 'active' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(1)}>
+        What is the procedure for seeking admission to postgraduate programs in University?
+          
+        </div>
+        {activeIndex === 1 && (
+          <div className="faq-answer">
+            For the academic year 2024-25, admission to all PG programs of University of Delhi (UoD) will be done through Common University Entrance Test (Postgraduate)- 2024 (CUET(PG)-2024) only. For admissions, candidate must
+          </div>
+        )}
+      </div>
+
+      <div className={`faq-item ${activeIndex === 2 ? 'active' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(2)}>
+        What is the procedure for seeking admission to postgraduate programs in University?
+          
+        </div>
+        {activeIndex === 2 && (
+          <div className="faq-answer">
+            For the academic year 2024-25, admission to all PG programs of University of Delhi (UoD) will be done through Common University Entrance Test (Postgraduate)- 2024 (CUET(PG)-2024) only. For admissions, candidate must:
+          </div>
+        )}
+      </div>
+
+      <div className={`faq-item ${activeIndex === 3 ? 'active' : ''}`}>
+        <div className="faq-question" onClick={() => toggleFAQ(3)}>
+        What is the procedure for seeking admission to postgraduate programs in University?
+          
+        </div>
+        {activeIndex === 3 && (
+          <div className="faq-answer">
+            For the academic year 2024-25, admission to all PG programs of University of Delhi (UoD) will be done through Common University Entrance Test (Postgraduate)- 2024 (CUET(PG)-2024) only. For admissions, candidate must.
+          </div>
+        )}
+      </div>
+
+      {/* Add more questions and answers here as needed */}
+    </div>
+
   </main>
 </>
 
