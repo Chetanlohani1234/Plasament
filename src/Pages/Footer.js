@@ -38,22 +38,22 @@ const Footer = () => {
         </div> */}
         {/* footer widget */}
         <div>
-          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
+          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white" style={{color:'black'}}>
             Online & Distance MBA
           </h6>
           <div className="space-y-[18px]">
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
-              <span className="icon">
+              <span className="icon" >
                 <img src="assets/img/double-arrow.svg" alt="icon" />
               </span>{" "}
               Finance
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className= "flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -62,7 +62,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -71,7 +71,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -80,7 +80,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -89,7 +89,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -98,7 +98,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -107,7 +107,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -116,7 +116,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -125,7 +125,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -134,7 +134,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -143,7 +143,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -152,7 +152,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -161,7 +161,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -170,7 +170,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -184,13 +184,13 @@ const Footer = () => {
         </div>
         </div>
         <div>
-          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
+          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white" style={{color:'black'}}>
             Online & Distance UG Courses
           </h6>
           <div className="space-y-[18px]">
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -199,7 +199,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -208,7 +208,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -217,7 +217,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -226,7 +226,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -235,7 +235,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -244,7 +244,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -253,7 +253,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -262,7 +262,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -271,7 +271,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -280,7 +280,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -289,7 +289,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -298,7 +298,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -307,7 +307,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -316,7 +316,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -328,13 +328,13 @@ const Footer = () => {
         </div>
 
        <div>
-       <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
+       <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white" style={{color:'black'}}>
             Online & Distance PG Courses
           </h6>
           <div className="space-y-[50px]">
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -343,7 +343,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -352,7 +352,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -361,7 +361,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -370,7 +370,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -379,7 +379,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -388,7 +388,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -397,7 +397,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -406,7 +406,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -415,7 +415,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -424,7 +424,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -433,7 +433,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -442,7 +442,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -451,7 +451,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -460,7 +460,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -470,7 +470,7 @@ const Footer = () => {
           </div>
           <br/><br/>
 
-          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white">
+          <h6 className="font-semibold text-[18px] pb-[15px] mb-[30px] relative before:absolute before:bottom-0 before:left-0 before:h-[1.5px] before:w-[20px] before:bg-edyellow after:absolute after:bottom-0 after:left-[30px] after:h-[1.5px] after:w-[63px] after:bg-white" style={{color:'black'}}>
             Online & Distance Best College for
           </h6>
           <div className="space-y-[18px]">
@@ -485,7 +485,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -494,7 +494,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -503,7 +503,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -512,7 +512,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -521,7 +521,7 @@ const Footer = () => {
             </a>
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -537,7 +537,7 @@ const Footer = () => {
           <a href="#" className="inline-block mb-[23px]">
             <img src="assets/img/Plasaent Logo.png" style={{backgroundColor:'whitesmoke'}} alt="logo" />
           </a>
-          <p className="text-[#D9D9D9] mb-[19px]">
+          <p className="text-[#D9D9D9] mb-[19px]" style={{color:'black'}}>
              GET THE RIGHT GUIDENCE WITH US
           </p>
           <ul className="space-y-[17px]">
@@ -545,15 +545,15 @@ const Footer = () => {
               <span className="icon">
                 <img src="assets/img/call-icon-yellow.svg" alt="icon" />
               </span>
-              <a href="tel:+6108-666-0112" className="hover:text-edyellow">
-                +6108-666-0112
+              <a href="tel:+9548055756" className="hover:text-edyellow" style={{color:'black'}}>
+                +9548055756
               </a>
             </li>
             <li className="flex items-center gap-[8px]">
               <span className="icon">
                 <img src="assets/img/message-yellow.svg" alt="icon" />
               </span>
-              <a href="mailto:info@gmail.com" className="hover:text-edyellow">
+              <a href="mailto:info@gmail.com" className="hover:text-edyellow" style={{color:'black'}}>
                 info@gmail.com
               </a>
             </li>
@@ -619,12 +619,12 @@ const Footer = () => {
       </div>
       {/* footer bottom */}
       <div className="flex flex-wrap items-center justify-between gap-[15px] pt-[20px] pb-[50px] text-[#d9d9d9]">
-        <p>© All Copyright 2024 by Vagonon</p>
+        <p style={{color:'black'}}>© All Copyright 2024 by Vagonon</p>
         <div className="flex flex-wrap gap-[40px] xxs:gap-[15px]">
-          <a href="#" className="hover:text-edyellow">
+          <a href="#" className="hover:text-edyellow" style={{color:'black'}}>
             Terms &amp; Conditions
           </a>
-          <a href="#" className="hover:text-edyellow">
+          <a href="#" className="hover:text-edyellow" style={{color:'black'}}>
             Privacy Policy
           </a>
         </div>

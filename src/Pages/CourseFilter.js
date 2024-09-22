@@ -248,7 +248,7 @@ const CourseFilter = () => {
             </div>
   
             {/* filter */}
-            <div>
+            <div sty>
               <h4 className="font-semibold text-[18px] text-black border-b border-[#dddddd] relative pb-[11px] before:content-normal before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-[2px] before:bg-edpurple">
                 Filter By Course
               </h4>
@@ -1384,7 +1384,7 @@ const CourseFilter = () => {
         </p>
       </div>
       <div className="image-section">
-        <img src="assets/img/compare.webp" alt="College Comparison" />
+        <img src="assets/img/compare.jpeg" alt="College Comparison" />
       </div>
     </div>
 

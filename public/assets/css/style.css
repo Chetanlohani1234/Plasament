@@ -562,13 +562,13 @@ h2 {
   }
 }
 .ed-header--2 .ed-header-nav > li > a {
-  color: var(--white);
+  /* color: var(--white); */
 }
 .ed-header--2 .ed-header-nav > li > a:hover {
   color: var(--ed-yellow);
 }
 .ed-header--2.to-be-fixed.ed-sticky {
-  background-color: var(--ed-blue);
+  /* background-color: var(--ed-blue); */
   inset: auto;
   border-radius: 0;
   width: 100%;

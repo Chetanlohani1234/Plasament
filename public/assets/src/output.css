@@ -3505,7 +3505,7 @@ video {
 
 .bg-edblue {
   --tw-bg-opacity: 1;
-  background-color: rgb(36 20 66 / var(--tw-bg-opacity));
+  /* background-color: rgb(36 20 66 / var(--tw-bg-opacity)); */
 }
 
 .bg-edoffwhite {
@@ -7548,14 +7548,14 @@ video {
 
 /*Add This css */
 
-.left {
-  margin-left: -110px; /* Default margin */
+.left123 {
+  margin-left: -110px; 
 }
 
-/* For mobile devices (screens less than 480px wide) */
+
 @media (max-width: 480px) {
-  .left {
-    margin-left: 0; /* Remove margin for mobile */
+  .left123 {
+    margin-left: 0; 
   }
 }
 

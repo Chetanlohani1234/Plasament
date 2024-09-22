@@ -30,7 +30,7 @@ const CourseDetail = () => {
         </div> */}
         {/* txt */}
         <div className="flex gap-[30px] lg:gap-[20px] md:flex-col md:items-center">
-          <div className="left max-w-full grow">
+          <div className="left123 max-w-full grow">
             <div>
               <h4 className="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mb-[23px]">
                 The Complete Graphic Design for Beginners
@@ -790,6 +790,7 @@ const CourseDetail = () => {
       </div>
     </section>
     {/* CTA SECTION END */}
+    <br/><br/>
 
   </main>
 </>
