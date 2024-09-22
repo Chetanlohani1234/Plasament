@@ -38,63 +38,176 @@
     border-radius: 10px; /* Rounded corners for image */
   }
   
+/* Main container for the slider */
+.slider-container {
+  max-width: 1200px; /* Max width for the slider */
+  margin: 0 auto; /* Center the slider */
+  padding: 20px; /* Padding around the slider */
+  text-align: center; /* Center-align text */
+}
+
+/* Headings */
+.slider-container h1 {
+  font-size: 2.5rem; /* Title size */
+  color: #007BFF; /* Blue color */
+  margin-bottom: 10px; /* Space below title */
+}
+
+.slider-container h2 {
+  font-size: 1.5rem; /* Subtitle size */
+  color: #555; /* Dark gray color */
+  margin-bottom: 20px; /* Space below subtitle */
+}
+
+/* Review box */
+.review-box {
+  position: relative;
+  background-color: #fff; /* White background for boxes */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  text-align: center; /* Center-align text */
+  transition: transform 0.3s; /* Smooth scale transition */
+  margin: 20px 0; /* Margin for spacing */
+}
+
+/* Hover effect for review box */
+.review-box:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Logo */
+.logo {
+  width: 80px; /* Logo size */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 15px; /* Space below the logo */
+}
+
+/* Review box headings */
+.review-box h2 {
+  margin: 10px 0; /* Spacing for the name */
+  font-size: 1.6rem; /* Font size for name */
+  color: #007BFF; /* Blue color for name */
+}
+
+.review-box h3 {
+  margin: 5px 0; /* Spacing for company name */
+  font-size: 1.2rem; /* Font size for company name */
+  color: #555; /* Gray color for company names */
+}
+
+.review-box p {
+  color: #333; /* Dark color for reviews */
+  line-height: 1.5; /* Better readability */
+  font-size: 1rem; /* Font size for reviews */
+  margin-top: 10px; /* Space above the review text */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
   .slider-container {
-    max-width: 1200px; /* Max width for the slider */
-    margin: 0 auto; /* Center the slider */
-    padding: 20px; /* Padding around the slider */
-    text-align: center; /* Center-align text */
+    padding: 15px; /* Reduce padding */
   }
-  
+
   .slider-container h1 {
-    font-size: 2.5rem; /* Title size */
-    color: #007BFF; /* Blue color */
-    margin-bottom: 10px; /* Space below title */
+    font-size: 2.2rem; /* Adjust font size for title */
   }
-  
+
   .slider-container h2 {
-    font-size: 1.5rem; /* Subtitle size */
-    color: #555; /* Dark gray color */
-    margin-bottom: 20px; /* Space below subtitle */
+    font-size: 1.4rem; /* Adjust font size for subtitle */
   }
-  
+
   .review-box {
-    position: relative;
-    background-color: #fff; /* White background for boxes */
-    border-radius: 15px; /* Rounded corners */
-    padding: 20px; /* Inner padding */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    text-align: center; /* Center-align text */
-    transition: transform 0.3s; /* Smooth scale transition */
+    padding: 15px; /* Reduce padding */
   }
-  
-  .review-box:hover {
-    transform: scale(1.05); /* Scale effect on hover */
-  }
-  
-  .logo {
-    width: 80px; /* Logo size */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 15px; /* Space below the logo */
-  }
-  
+
   .review-box h2 {
-    margin: 10px 0; /* Spacing for the name */
-    font-size: 1.6rem; /* Font size for name */
-    color: #007BFF; /* Blue color for name */
+    font-size: 1.4rem; /* Reduce font size for name */
   }
-  
+
   .review-box h3 {
-    margin: 5px 0; /* Spacing for company name */
-    font-size: 1.2rem; /* Font size for company name */
-    color: #555; /* Gray color for company names */
+    font-size: 1rem; /* Reduce font size for company name */
   }
-  
+
   .review-box p {
-    color: #333; /* Dark color for reviews */
-    line-height: 1.5; /* Better readability */
-    font-size: 1rem; /* Font size for reviews */
-    margin-top: 10px; /* Space above the review text */
+    font-size: 0.9rem; /* Reduce font size for reviews */
   }
+
+  .logo {
+    width: 70px; /* Reduce logo size */
+  }
+}
+
+/* For mobile phones and smaller screens */
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 10px; /* Minimal padding */
+  }
+
+  .slider-container h1 {
+    font-size: 1.8rem; /* Further reduce font size */
+  }
+
+  .slider-container h2 {
+    font-size: 1.2rem; /* Further reduce subtitle font size */
+  }
+
+  .review-box {
+    padding: 10px; /* Minimize padding for review box */
+  }
+
+  .review-box h2 {
+    font-size: 1.2rem; /* Further reduce font size for name */
+  }
+
+  .review-box h3 {
+    font-size: 0.9rem; /* Further reduce font size for company name */
+  }
+
+  .review-box p {
+    font-size: 0.8rem; /* Further reduce font size for reviews */
+  }
+
+  .logo {
+    width: 50px; /* Further reduce logo size */
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .slider-container {
+    padding: 5px; /* Minimal padding */
+  }
+
+  .slider-container h1 {
+    font-size: 1.5rem; /* Further reduce font size */
+  }
+
+  .slider-container h2 {
+    font-size: 1rem; /* Further reduce subtitle font size */
+  }
+
+  .review-box {
+    padding: 5px; /* Minimal padding for review box */
+  }
+
+  .review-box h2 {
+    font-size: 1rem; /* Further reduce font size for name */
+  }
+
+  .review-box h3 {
+    font-size: 0.8rem; /* Further reduce font size for company name */
+  }
+
+  .review-box p {
+    font-size: 0.7rem; /* Further reduce font size for reviews */
+  }
+
+  .logo {
+    width: 40px; /* Further reduce logo size */
+  }
+}
+
   
   /* Auto-scroll styles */
   .auto-scroll {
@@ -115,4 +228,171 @@
     align-items: center;
   }
 
+
   
+
+/* Banner section */
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 80px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner-text {
+  max-width: 50%;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.banner-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Image container to position the link on the image */
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Positioning the YouTube link over the image */
+.youtube-link {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  background-color: #ff0000; /* YouTube red */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.youtube-link:hover {
+  background-color: #e60000;
+}
+
+/* Footer section */
+.footer-text {
+  background-color: #007bff;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  margin-top: 40px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer-text p {
+  margin: 0;
+  font-style: italic;
+}
+
+
+
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+  .comparison-container, .banner-container {
+    flex-direction: column; /* Stack sections vertically */
+    padding: 20px;
+  }
+
+  .text-section, .image-section {
+    flex: none; /* Remove flex behavior for side-by-side layout */
+    width: 100%; /* Full width on small screens */
+    padding: 10px;
+  }
+
+
+  .banner-text h1 {
+    font-size: 2rem; /* Adjust banner title font size */
+  }
+
+  .banner-text p {
+    font-size: 1rem; /* Adjust banner text font size */
+  }
+
+  .review-box {
+    margin-bottom: 20px; /* Add spacing between review boxes */
+  }
+}
+
+/* For mobile phones and smaller screens */
+@media (max-width: 768px) {
+  .comparison-container, .slider-container, .banner-container {
+    padding: 15px;
+  }
+
+  .text-section, .image-section {
+    padding: 10px;
+  }
+
+  .banner-text h1 {
+    font-size: 1.8rem; /* Reduce banner title size for mobile */
+  }
+
+  .banner-text p {
+    font-size: 0.9rem; /* Reduce banner text size */
+  }
+
+  .image-container img {
+    width: 100%; /* Ensure images take full width */
+  }
+
+  .youtube-link {
+    top: 50%;
+    left: 50%;
+    padding: 10px 20px; /* Adjust link padding */
+  }
+  
+  .footer-text {
+    padding: 15px; /* Reduce footer padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+/* For very small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .banner-container {
+    padding: 10px; /* Reduce padding for very small screens */
+  }
+
+  .banner-text h1 {
+    font-size: 1.5rem; /* Further reduce banner title size */
+  }
+
+  .banner-text p {
+    font-size: 0.8rem; /* Further reduce banner text size */
+  }
+
+  .footer-text {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .youtube-link {
+    font-size: 0.8rem; /* Reduce font size for YouTube link */
+    padding: 8px 15px;
+  }
+}
+

@@ -7,7 +7,7 @@ const Header = () => {
        {/* HEADER SECTION START */}
   <header  className="bg-edblue ed-header--2 relative z-[2] px-[7.9%] xxxxl:px-[6.5%] xxxl:px-[1%] lg:px-[15px] py-[25px] xxs:py-[16px] flex items-center justify-between to-be-fixed" style={{height:'70px'}}>
     <div className="logo xxs:max-w-[40%]">
-        <img src="assets/img/Plasaent Logo.png" style={{backgroundColor:'whitesmoke'}} alt="logo" className="logo" />
+        <img src="assets/img/Plasaent Logo.png" style={{backgroundColor:'whitesmoke',marginTop:'20px',height:'50px'}} alt="logo" className="logo" />
 
     </div>
     <div className="flex lg:items-center lg:gap-[30px]">

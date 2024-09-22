@@ -163,6 +163,58 @@ const CourseFilter = () => {
     </div>
   </div>
   <main>
+  <div class="banner-container">
+  <div class="banner-text">
+    <h1>Take the RIGHT STEPS towards your GOAL with College Vidya!</h1>
+    <p>We are Known for providing top-notch admission services</p>
+  </div>
+  <div class="banner-images">
+    <img src="assets/img/youtube1.webp" alt="Student" />
+    <a href="https://www.youtube.com/watch?v=your_video_id" target="_blank" class="youtube-link">Must Watch</a>
+
+  </div>
+</div>
+<div class="footer-text">
+  <p>The future depends on what you do today.</p>
+</div>
+
+
+  <div className="auto-scroll">
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={4}
+            loop={true}
+            autoplay={{
+              delay: 1000, // Set a higher delay (3000ms = 3 seconds)
+              //disableOnInteraction: false,
+            }}
+            //navigation // Enable navigation
+            //pagination={{ clickable: true }} // Enable pagination
+            //modules={[Autoplay, Navigation, Pagination]} // Register Swiper modules
+          >
+            <SwiperSlide>
+              <img src="assets/img/df.webp" alt="Partner 1" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u2.webp" alt="Partner 2" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u3.webp" alt="Partner 3" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u4.webp" alt="Partner 4" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u5.webp" alt="Partner 5" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u6.webp" alt="Partner 6" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u7.webp" alt="Partner 7" />
+            </SwiperSlide>
+          </Swiper>
+        </div>
     <div className="py-[120px] xl:py-[80px] md:py-[60px]">
       <div className="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
         <div className="flex gap-[30px] lg:gap-[20px] md:flex-col md:items-center">
@@ -193,6 +245,7 @@ const CourseFilter = () => {
                 </button>
               </form> */}
             </div>
+  
             {/* filter */}
             <div>
               <h4 className="font-semibold text-[18px] text-black border-b border-[#dddddd] relative pb-[11px] before:content-normal before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-[2px] before:bg-edpurple">
