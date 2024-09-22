@@ -9,7 +9,7 @@ const CourseDetail = () => {
 
   return (
 <>
-  <main>
+  <main style={{overflowX:"hidden"}}>
     {/* main content */}
     <div className="py-[120px] xl:py-[80px] md:py-[60px]">
       <div className="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
@@ -751,7 +751,7 @@ const CourseDetail = () => {
     </div>
 
         {/* CTA SECTION START */}
-        <section className="ed-2-cta overflow-hidden bg-edpurple pt-[15px] md:pt-[40px] relative z-[1] before:absolute before:inset-0 before:bg-[url(../assets/img/cta-2-vector.png)] before:bg-center before:bg-no-repeat before:bg-cover before:-z-[1]" style={{marginBottom:'50px',height:'20%'}}>
+        <section className="ed-2-cta overflow-hidden bg-edpurple pt-[15px] md:pt-[40px] relative z-[1] before:absolute before:inset-0 before:bg-[url(../assets/img/cta-2-vector.png)] before:bg-center before:bg-no-repeat before:bg-cover before:-z-[1]">
       <div className="mx-[19.7%] xxxl:mx-[14.7%] xxl:mx-[9.7%] xl:mx-[3.2%] md:mx-[15px]">
         <div className="flex md:flex-col gap-y-[15px] items-center justify-between">
           {/* text */}

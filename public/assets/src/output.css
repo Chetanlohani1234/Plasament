@@ -7545,3 +7545,17 @@ video {
     }
   }
 }
+
+/*Add This css */
+
+.left {
+  margin-left: -110px; /* Default margin */
+}
+
+/* For mobile devices (screens less than 480px wide) */
+@media (max-width: 480px) {
+  .left {
+    margin-left: 0; /* Remove margin for mobile */
+  }
+}
+
