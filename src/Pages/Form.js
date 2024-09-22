@@ -46,40 +46,41 @@ const Form = () => {
         <h2 style={{fontSize:'20px'}}>Fill In Your Details Now to Access Your List</h2>
          <h1>29 Matches Found</h1>
         <div className="auto-scroll">
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={4}
-        loop={true}
-        autoplay={{
-          delay: 1000, // Set a higher delay (3000ms = 3 seconds)
-          //disableOnInteraction: false,
-        }}
-        //navigation // Enable navigation
-        //pagination={{ clickable: true }} // Enable pagination
-        //modules={[Autoplay, Navigation, Pagination]} // Register Swiper modules
-      >
-        <SwiperSlide>
-          <img src="assets/img/df.webp" alt="Partner 1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="assets/img/u2.webp" alt="Partner 2" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="assets/img/u3.webp" alt="Partner 3" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="assets/img/u4.webp" alt="Partner 4" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="assets/img/u5.webp" alt="Partner 5" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="assets/img/u6.webp" alt="Partner 6" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="assets/img/u7.webp" alt="Partner 7" />
-        </SwiperSlide>
-      </Swiper>
+          <Swiper
+            spaceBetween={30}
+            slidesPerView={4}
+            loop={true}
+            autoplay={{
+              delay: 1000, // Set a higher delay (3000ms = 3 seconds)
+              disableOnInteraction: false,
+            }}
+            modules={[Autoplay]}
+            //navigation // Enable navigation
+            //pagination={{ clickable: true }} // Enable pagination
+            //modules={[Autoplay, Navigation, Pagination]} // Register Swiper modules
+          >
+            <SwiperSlide>
+              <img src="assets/img/df.webp" alt="Partner 1" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u2.webp" alt="Partner 2" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u3.webp" alt="Partner 3" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u4.webp" alt="Partner 4" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u5.webp" alt="Partner 5" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u6.webp" alt="Partner 6" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="assets/img/u7.webp" alt="Partner 7" />
+            </SwiperSlide>
+          </Swiper>
 
         {/* Add your GIF below the Swiper component */}
         <div className="gif-container">

@@ -147,7 +147,7 @@ const CourseFilter = () => {
       {/* heading */}
       <div className="ed-sidebar-heading p-[20px] lg:p-[20px] border-b border-edgray/20">
         <div className="logo flex justify-between items-center">
-          <a href="index-2.html">
+          <a href="#">
             <img src="assets/img/logo.png" alt="logo" />
           </a>
           <button
@@ -179,15 +179,16 @@ const CourseFilter = () => {
 </div>
 
 
-  <div className="auto-scroll">
+        <div className="auto-scroll">
           <Swiper
             spaceBetween={30}
             slidesPerView={4}
             loop={true}
             autoplay={{
               delay: 1000, // Set a higher delay (3000ms = 3 seconds)
-              //disableOnInteraction: false,
+              disableOnInteraction: false,
             }}
+            modules={[Autoplay]}
             //navigation // Enable navigation
             //pagination={{ clickable: true }} // Enable pagination
             //modules={[Autoplay, Navigation, Pagination]} // Register Swiper modules

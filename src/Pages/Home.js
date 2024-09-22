@@ -439,6 +439,7 @@ return (
           delay: 300,
           disableOnInteraction: false,
         }}
+        modules={[Autoplay]}
        // navigation
        // pagination={{ clickable: true }}
        // modules={[Autoplay, Pagination]} // Register Swiper modules here
