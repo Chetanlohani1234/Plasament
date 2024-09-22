@@ -25,7 +25,7 @@ const Contact = () => {
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="#" className="hover:text-edpurple">
                 Web Development
               </a>
             </h6>
@@ -44,7 +44,7 @@ const Contact = () => {
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="#" className="hover:text-edpurple">
                 Digital Marketing
               </a>
             </h6>
@@ -63,7 +63,7 @@ const Contact = () => {
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="#" className="hover:text-edpurple">
                 WordPress Development
               </a>
             </h6>
@@ -117,7 +117,7 @@ const Contact = () => {
       {/* heading */}
       <div className="ed-sidebar-heading p-[20px] lg:p-[20px] border-b border-edgray/20">
         <div className="logo flex justify-between items-center">
-          <a href="index-2.html">
+          <a href="#">
             <img src="assets/img/logo.png" alt="logo" />
           </a>
           <button

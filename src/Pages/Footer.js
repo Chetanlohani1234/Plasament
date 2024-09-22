@@ -534,7 +534,7 @@ const Footer = () => {
 
            <br/><br/>
          <div className="max-w-[370px] xxs:max-w-full">
-          <a href="index-2.html" className="inline-block mb-[23px]">
+          <a href="#" className="inline-block mb-[23px]">
             <img src="assets/img/Plasaent Logo.png" style={{backgroundColor:'whitesmoke'}} alt="logo" />
           </a>
           <p className="text-[#D9D9D9] mb-[19px]">

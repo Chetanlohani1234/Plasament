@@ -163,7 +163,7 @@ return (
       {/* heading */}
       <div className="ed-sidebar-heading p-[20px] lg:p-[20px] border-b border-edgray/20">
         <div className="logo flex justify-between items-center">
-          <a href="index-2.html">
+          <a href="#">
             <img src="assets/img/logo.png" alt="logo" />
           </a>
           <button
@@ -274,7 +274,7 @@ return (
         <div className="grid grid-cols-4 xl:grid-cols-3 md:grid-cols-2 xxs:grid-cols-1 gap-[20px]">
           {/* single category */}
           <a
-            href="course-grid.html"
+            href="#"
             className="border border-[#e5e5e5] rounded-[10px] py-[16px] px-[20px] flex sm:flex-col items-center sm:items-start gap-y-[15px] gap-x-[20px] hover:bg-[#F8B81F] hover:border-[#F8B81F] group"
           >
             {/* icon */}
@@ -304,7 +304,7 @@ return (
           </a>
           {/* single category */}
           <a
-            href="course-grid.html"
+            href="#"
             className="border border-[#e5e5e5] rounded-[10px] py-[16px] px-[20px] flex sm:flex-col items-center sm:items-start gap-y-[15px] gap-x-[20px] hover:bg-[#39C0FA] hover:border-[#39C0FA] group"
           >
             {/* icon */}
@@ -342,7 +342,7 @@ return (
           </a>
           {/* single category */}
           <a
-            href="course-grid.html"
+            href="#"
             className="border border-[#e5e5e5] rounded-[10px] py-[16px] px-[20px] flex sm:flex-col items-center sm:items-start gap-y-[15px] gap-x-[20px] hover:bg-[#F92596] hover:border-[#F92596] group"
           >
             {/* icon */}
@@ -391,7 +391,7 @@ return (
           </a>
           {/* single category */}
           <a
-            href="course-grid.html"
+            href="#"
             className="border border-[#e5e5e5] rounded-[10px] py-[16px] px-[20px] flex sm:flex-col items-center sm:items-start gap-y-[15px] gap-x-[20px] hover:bg-[#5866EB] hover:border-[#5866EB] group"
           >
             {/* icon */}
@@ -929,7 +929,7 @@ return (
             {/* txt */}
             <div>
               <h6 className="font-semibold text-[18px] text-edblue mb-[12px]">
-                <a href="teacher-details.html" className="hover:text-edyellow">
+                <a href="#" className="hover:text-edyellow">
                   Brooklyn Simmons
                 </a>
               </h6>
@@ -986,7 +986,7 @@ return (
             {/* txt */}
             <div>
               <h6 className="font-semibold text-[18px] text-edblue mb-[12px]">
-                <a href="teacher-details.html" className="hover:text-edyellow">
+                <a href="#" className="hover:text-edyellow">
                   Leslie Alexander
                 </a>
               </h6>
@@ -1043,7 +1043,7 @@ return (
             {/* txt */}
             <div>
               <h6 className="font-semibold text-[18px] text-edblue mb-[12px]">
-                <a href="teacher-details.html" className="hover:text-edyellow">
+                <a href="#" className="hover:text-edyellow">
                   Ronald Richards
                 </a>
               </h6>
@@ -1100,7 +1100,7 @@ return (
             {/* txt */}
             <div>
               <h6 className="font-semibold text-[18px] text-edblue mb-[12px]">
-                <a href="teacher-details.html" className="hover:text-edyellow">
+                <a href="#" className="hover:text-edyellow">
                   Kristin Watson
                 </a>
               </h6>
@@ -1348,7 +1348,7 @@ return (
             Expert Instructor Live Classes Here!
           </h2>
           <a
-            href="course-grid.html"
+            href="#"
             className="ed-btn !h-[56px] !bg-white !text-black gap-[10px] hover:!bg-edyellow hover:!text-edblue"
           >
             Join Courses{" "}

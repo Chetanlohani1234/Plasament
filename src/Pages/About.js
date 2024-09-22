@@ -25,7 +25,7 @@ const About = () => {
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="#" className="hover:text-edpurple">
                 Web Development
               </a>
             </h6>
@@ -44,7 +44,7 @@ const About = () => {
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="#" className="hover:text-edpurple">
                 Digital Marketing
               </a>
             </h6>
@@ -63,7 +63,7 @@ const About = () => {
           />
           <div className="grow">
             <h6 className="font-medium text-[18px] text-edblue">
-              <a href="course-details.html" className="hover:text-edpurple">
+              <a href="#" className="hover:text-edpurple">
                 WordPress Development
               </a>
             </h6>
@@ -117,7 +117,7 @@ const About = () => {
       {/* heading */}
       <div className="ed-sidebar-heading p-[20px] lg:p-[20px] border-b border-edgray/20">
         <div className="logo flex justify-between items-center">
-          <a href="index-2.html">
+          <a href="#">
             <img src="assets/img/logo.png" alt="logo" />
           </a>
           <button
@@ -195,7 +195,7 @@ const About = () => {
                     </h6>
                   </div>
                 </div>
-                <a href="contact.html" className="ed-btn gap-[10px]">
+                <a href="#" className="ed-btn gap-[10px]">
                   message principal{" "}
                   <span className="icon">
                     <i className="fa-solid fa-arrow-right-long" />
@@ -331,7 +331,7 @@ const About = () => {
                   <span>Business</span>
                 </span>
                 <h5 className="font-bold text-[22px] text-black mb-[7px]">
-                  <a href="event-details.html" className="hover:text-edpurple">
+                  <a href="#" className="hover:text-edpurple">
                     Attentive was born in 2015 help
                   </a>
                 </h5>
@@ -340,7 +340,7 @@ const About = () => {
                   available, but the majority have.
                 </p>
                 <a
-                  href="event-details.html"
+                  href="#"
                   className="inline-flex items-center gap-[10px] underline text-edpurple font-medium hover:text-edyellow"
                 >
                   Read More{" "}
@@ -376,7 +376,7 @@ const About = () => {
                   <span>Sciences</span>
                 </span>
                 <h5 className="font-bold text-[22px] text-black mb-[7px]">
-                  <a href="event-details.html" className="hover:text-edpurple">
+                  <a href="#" className="hover:text-edpurple">
                     Biotechnology
                   </a>
                 </h5>
@@ -385,7 +385,7 @@ const About = () => {
                   available, but the majority have.
                 </p>
                 <a
-                  href="event-details.html"
+                  href="#"
                   className="inline-flex items-center gap-[10px] underline text-edpurple font-medium hover:text-edyellow"
                 >
                   Read More{" "}
@@ -421,7 +421,7 @@ const About = () => {
                   <span>Managements</span>
                 </span>
                 <h5 className="font-bold text-[22px] text-black mb-[7px]">
-                  <a href="event-details.html" className="hover:text-edpurple">
+                  <a href="#" className="hover:text-edpurple">
                     Public Administration
                   </a>
                 </h5>
@@ -430,7 +430,7 @@ const About = () => {
                   available, but the majority have.
                 </p>
                 <a
-                  href="event-details.html"
+                  href="#"
                   className="inline-flex items-center gap-[10px] underline text-edpurple font-medium hover:text-edyellow"
                 >
                   Read More{" "}
@@ -466,7 +466,7 @@ const About = () => {
                   <span>Business</span>
                 </span>
                 <h5 className="font-bold text-[22px] text-black mb-[7px]">
-                  <a href="event-details.html" className="hover:text-edpurple">
+                  <a href="#" className="hover:text-edpurple">
                     Attentive was born in 2015 help
                   </a>
                 </h5>
@@ -475,7 +475,7 @@ const About = () => {
                   available, but the majority have.
                 </p>
                 <a
-                  href="event-details.html"
+                  href="#"
                   className="inline-flex items-center gap-[10px] underline text-edpurple font-medium hover:text-edyellow"
                 >
                   Read More{" "}

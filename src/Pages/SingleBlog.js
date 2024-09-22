@@ -50,7 +50,7 @@ const SingleBlog = () => {
                 </div>
               </div>
               <h3 className="text-[30px] lg:text-[27px] sm:text-[24px] xxs:text-[22px] font-semibold text-black mb-[18px]">
-                <a href="news-details.html" className="hover:text-edpurple">
+                <a href="#" className="hover:text-edpurple">
                   Make Your Expanding Contracting Content
                 </a>
               </h3>
@@ -441,7 +441,7 @@ const SingleBlog = () => {
                     <span>18 Dec, 2024</span>
                   </span>
                   <h6 className="font-semibold text-[15px] text-black">
-                    <a href="news-details.html" className="hover:text-edpurple">
+                    <a href="#" className="hover:text-edpurple">
                       Keep Your Business Safe &amp; Endure High Availability
                     </a>
                   </h6>
@@ -499,7 +499,7 @@ const SingleBlog = () => {
                     <span>18 Dec, 2024</span>
                   </span>
                   <h6 className="font-semibold text-[15px] text-black">
-                    <a href="news-details.html" className="hover:text-edpurple">
+                    <a href="#" className="hover:text-edpurple">
                       Make Your Own Expanding Contracting
                     </a>
                   </h6>
@@ -557,7 +557,7 @@ const SingleBlog = () => {
                     <span>18 Dec, 2024</span>
                   </span>
                   <h6 className="font-semibold text-[15px] text-black">
-                    <a href="news-details.html" className="hover:text-edpurple">
+                    <a href="#" className="hover:text-edpurple">
                       Keep Your Business Safe &amp; Endure High Availability
                     </a>
                   </h6>
