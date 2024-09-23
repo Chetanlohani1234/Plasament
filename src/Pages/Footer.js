@@ -476,7 +476,7 @@ const Footer = () => {
           <div className="space-y-[18px]">
             <a
               href="#"
-              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow"
+              className="flex items-center gap-[10px] opacity-80 hover:text-edyellow" style={{color:'black'}}
             >
               <span className="icon">
                 <img src="assets/img/double-arrow.svg" alt="icon" />
@@ -534,8 +534,8 @@ const Footer = () => {
 
            <br/><br/>
          <div className="max-w-[370px] xxs:max-w-full">
-          <a href="#" className="inline-block mb-[23px]">
-            <img src="assets/img/Plasaent Logo.png" style={{backgroundColor:'whitesmoke'}} alt="logo" />
+          <a href="/" className="inline-block mb-[23px]">
+            <img src="assets/img/Plasaent Logo.png" alt="logo" />
           </a>
           <p className="text-[#D9D9D9] mb-[19px]" style={{color:'black'}}>
              GET THE RIGHT GUIDENCE WITH US
