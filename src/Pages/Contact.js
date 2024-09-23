@@ -148,7 +148,7 @@ const Contact = () => {
                 <div className="txt">
                   <span className="font-normal">Call Us 7/24</span>
                   <h4 className="font-medium text-[24px] xxs:text-[22px]">
-                    <a href="tel:+208-555-0112">+208-555-0112</a>
+                    <a href="tel:+9548055756">+9548055756</a>
                   </h4>
                 </div>
               </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                 <div className="txt">
                   <span className="font-normal">Make a Quote</span>
                   <h4 className="font-medium text-[24px] xxs:text-[22px]">
-                    <a href="mailto:eventek@gmail.com">eventek@gmail.com</a>
+                    <a href="mailto:eventek@gmail.com">info@gmail.com</a>
                   </h4>
                 </div>
               </div>
@@ -175,7 +175,7 @@ const Contact = () => {
                 <div className="txt">
                   <span className="font-normal">Location</span>
                   <h4 className="font-medium text-[24px] xxs:text-[22px]">
-                    4517 Washington ave.
+                    53/1 Indra Colony.
                   </h4>
                 </div>
               </div>
