@@ -42,6 +42,21 @@
         <script src="assets/js/accordion.js"></script>
 
 
+        <script>
+          const mobileMenu = document.getElementById('mobile-menu');
+          const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+          const mobileMenuClose = document.getElementById('mobile-menu-close');
+        
+          mobileMenuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+          });
+        
+          mobileMenuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+          });
+        </script>
+
+
     
     <!--
       This HTML file is a template.
