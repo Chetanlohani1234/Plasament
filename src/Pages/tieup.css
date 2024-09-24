@@ -6,6 +6,7 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5%;
   }
   
   .partner-image {
@@ -235,6 +236,9 @@
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
+  .partner-container{
+    margin-top: 20%;
+  }
   .form-popup-content {
     width: 95%;
     padding: 20px;
@@ -254,6 +258,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .partner-container{
+    margin-top: 20%;
+  }
+  
   .form-popup-content {
     padding: 15px;
     max-width: 90%;

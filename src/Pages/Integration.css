@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 5%;
 }
 
 /* Image grid */
@@ -100,6 +101,8 @@
 
 /* For devices with a screen width of 1200px or more */
 @media (max-width: 1200px) {
+
+
     .image-grid {
         grid-template-columns: repeat(4, 1fr); /* 4 images per row */
     }
@@ -107,6 +110,9 @@
 
 /* For devices with a screen width of 768px or more */
 @media (max-width: 768px) {
+    .image-grid-container {
+        margin-top: 20%;
+    }
     .image-grid {
         grid-template-columns: repeat(3, 1fr); /* 3 images per row */
     }
