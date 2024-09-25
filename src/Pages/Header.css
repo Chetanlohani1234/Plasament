@@ -83,7 +83,7 @@
 }
 
 .nav-menu1 li {
-    position: relative; /* Position relative for submenu positioning */
+    /* position: relative;  */
     margin: 0 15px; /* Space between menu items */
 }
 
@@ -103,7 +103,7 @@
 
 /* Submenu styling */
 .submenu1 {
-    position: absolute; /* Position submenu */
+    position: absolute;
     background-color: white; /* White background for submenu */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for submenu */
     padding: 10px; /* Add padding */
@@ -148,7 +148,7 @@
 
 
     .search-form1 {
-        margin-left: 30px; /* Adjust margin for mobile */
+        margin-left: 40px; /* Adjust margin for mobile */
         width: 100%; /* Use a percentage width for mobile */
     }
 
@@ -166,6 +166,7 @@
 
     .mobile-menu-button1 {
         display: block; /* Show mobile menu button */
+        width: 10%;    
     }
 
     .nav-menu1 li {

@@ -57,6 +57,31 @@
         </script>
 
 
+
+
+
+<script>
+  // Show the modal when the page loads
+  window.onload = function() {
+    const modal = document.getElementById('appDownloadModal');
+    modal.style.display = 'flex'; // Show modal
+  };
+
+  // Close the modal when the "Cancel" button is clicked
+  document.querySelector('.cancel-btn').addEventListener('click', function() {
+    const modal = document.getElementById('appDownloadModal');
+    modal.style.display = 'none'; // Hide modal
+  });
+
+  // Handle "Download" button click (you can add download logic here)
+  document.querySelector('.download-btn').addEventListener('click', function() {
+    alert('Download started!');
+    const modal = document.getElementById('appDownloadModal');
+    modal.style.display = 'none'; // Hide modal after clicking Download
+  });
+</script>
+
+
     
     <!--
       This HTML file is a template.

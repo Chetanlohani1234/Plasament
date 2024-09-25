@@ -4,6 +4,7 @@ import './JobsPlacement.css'; // Ensure this CSS file exists
 const JobsPlacement = () => {
     return (
         <div className="jobs-placement-container">
+          <br/><br/><br/><br/>
             <div className="intro-text">
                 <h1 className="classJobs">Pure Professional Job Portal</h1>
                 <p>

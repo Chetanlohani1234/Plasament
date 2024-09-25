@@ -1,120 +1,3 @@
-// import React from 'react'
-
-// const Faq = () => {
-//   return (
-//     <>
-
-// <main>
-//   {/* FAQ SECTION START */}
-//   <section className="ed-faq py-[120px] xl:py-[80px] md:py-[60px]">
-//     <div className="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-//       {/* faq section */}
-//       <div className="grid grid-cols-2 md:grid-cols-1 gap-x-[70px] xl:gap-x-[50px] lg:gap-x-[30px] gap-y-[40px]">
-//         <div>
-//           <img
-//             src="assets/img/faq-img.jpg"
-//             alt="image"
-//             className="rounded-[8px] h-full object-cover"
-//           />
-//         </div>
-//         <div>
-//           {/* heading */}
-//           <div className="mb-[22px]">
-//             <h6 className="ed-section-sub-title">Ask Questions</h6>
-//             <h2 className="ed-section-title">Frequently Asked Questions</h2>
-//           </div>
-//           <div className="ed-accordion space-y-[16px]">
-//             {/* single question */}
-//             <div className="ed-single-accordion-item bg-white border border-[#E5E5E5] rounded-[8px] py-[24px] xs:py-[15px] px-[30px] xs:px-[20px]">
-//               <div className="ed-single-accordion-item__header flex items-center justify-between cursor-pointer">
-//                 <h3 className="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">
-//                   How long should a business plan be?
-//                 </h3>
-//                 <span className="text-[15px]">
-//                   <i className="fa-solid fa-angles-right" />
-//                 </span>
-//               </div>
-//               <div className="ed-single-accordion-item__body">
-//                 <p className="font-light text-[16px] text-etGray">
-//                   Nullam faucibus eleifend mi eu varius. Integer vel tincidunt
-//                   massa, quis semper odio. Mauris et mollis quam. Nullam
-//                   fringilla erat id ante commodo sodales. In maximus ultrices
-//                   euismod. Vivamus porta justo ex.
-//                 </p>
-//               </div>
-//             </div>
-//             {/* single question */}
-//             <div className="ed-single-accordion-item bg-white border border-[#E5E5E5] rounded-[8px] py-[24px] xs:py-[15px] px-[30px] xs:px-[20px] open">
-//               <div className="ed-single-accordion-item__header flex items-center justify-between cursor-pointer">
-//                 <h3 className="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">
-//                   What is included in your services?
-//                 </h3>
-//                 <span className="text-[15px]">
-//                   <i className="fa-solid fa-angles-right" />
-//                 </span>
-//               </div>
-//               <div className="ed-single-accordion-item__body">
-//                 <p className="font-light text-[16px] text-etGray">
-//                   Nullam faucibus eleifend mi eu varius. Integer vel tincidunt
-//                   massa, quis semper odio. Mauris et mollis quam. Nullam
-//                   fringilla erat id ante commodo sodales. In maximus ultrices
-//                   euismod. Vivamus porta justo ex.
-//                 </p>
-//               </div>
-//             </div>
-//             {/* single question */}
-//             <div className="ed-single-accordion-item bg-white border border-[#E5E5E5] rounded-[8px] py-[24px] xs:py-[15px] px-[30px] xs:px-[20px]">
-//               <div className="ed-single-accordion-item__header flex items-center justify-between cursor-pointer">
-//                 <h3 className="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">
-//                   What type of company is measured?
-//                 </h3>
-//                 <span className="text-[15px]">
-//                   <i className="fa-solid fa-angles-right" />
-//                 </span>
-//               </div>
-//               <div className="ed-single-accordion-item__body">
-//                 <p className="font-light text-[16px] text-etGray">
-//                   Nullam faucibus eleifend mi eu varius. Integer vel tincidunt
-//                   massa, quis semper odio. Mauris et mollis quam. Nullam
-//                   fringilla erat id ante commodo sodales. In maximus ultrices
-//                   euismod. Vivamus porta justo ex.
-//                 </p>
-//               </div>
-//             </div>
-//             {/* single question */}
-//             <div className="ed-single-accordion-item bg-white border border-[#E5E5E5] rounded-[8px] py-[24px] xs:py-[15px] px-[30px] xs:px-[20px]">
-//               <div className="ed-single-accordion-item__header flex items-center justify-between cursor-pointer">
-//                 <h3 className="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">
-//                   What type of company is measured?
-//                 </h3>
-//                 <span className="text-[15px]">
-//                   <i className="fa-solid fa-angles-right" />
-//                 </span>
-//               </div>
-//               <div className="ed-single-accordion-item__body">
-//                 <p className="font-light text-[16px] text-etGray">
-//                   Nullam faucibus eleifend mi eu varius. Integer vel tincidunt
-//                   massa, quis semper odio. Mauris et mollis quam. Nullam
-//                   fringilla erat id ante commodo sodales. In maximus ultrices
-//                   euismod. Vivamus porta justo ex.
-//                 </p>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   </section>
-//   {/* FAQ SECTION END */}
-// </main>
-
-      
-//     </>
-//   )
-// }
-
-// export default Faq
-
 import React,{useState} from 'react';
 import './Faq.css';
 
@@ -148,38 +31,38 @@ const Faq = () => {
   };
 
   return (
-    <div className="container">
-      {/* First Section: Q&A Section with form */}
-      <div className="section qna-section">
-        <form className="form-section">
+    <div className="container1">
+      {/* First Section1: Q&A Section1 with form */}
+      <div className="Section1 qna-Section1">
+        <form className="form-Section1">
         <div className="form-group">
   <label htmlFor="college" style={{color:'#00a7ac'}}>College</label>
-  <input type="text" id="college" placeholder="Search course..." />
+  <input className='input1' type="text" id="college" placeholder="Search course..." />
   
-  <div className="checkbox-group">
+  <div className="checkbox-group1">
     {/* Specific names for each checkbox */}
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">LPU, Jalandhar - [544]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">IIM Indore, Indore - [383]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">IIM Ahmedabad, Ahmedabad - [381]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">IIT Bhubaneswar, Bhubaneswar - [349]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">IIM Mumbai, Mumbai - [322]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">BITS Pilani, Pilani - [321]</label>
     </div>
   </div>
@@ -188,32 +71,32 @@ const Faq = () => {
 
           <div className="form-group">
   <label htmlFor="course" style={{color:'#00a7ac'}}>Course</label>
-  <input type="text" id="course" placeholder="Search course..." />
+  <input className='input1' type="text" id="course" placeholder="Search course..." />
   
-  <div className="checkbox-group">
+  <div className="checkbox-group1">
     {/* Specific names for each checkbox */}
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">MBA/PGDM - [47]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">PG Diploma in Management - [29]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">Executive MBA - [9]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">Graduate Certificate in Management - [5]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">M.Phil/Ph.D in Management - [3]</label>
     </div>
     <div>
-      <input type="checkbox" id="course-option" />
+      <input className='input1' type="checkbox" id="course-option" />
       <label className='labelName' htmlFor="course-option">BE/B.Tech - [1]</label>
     </div>
   </div>
@@ -223,12 +106,12 @@ const Faq = () => {
         </form>
       </div>
 
-      {/* Second Section: Feed Section */}
-      <div className="section feed-section">
-        <div className="feed-controls">
+      {/* Second Section1: Feed Section1 */}
+      <div className="Section1 feed-Section1">
+        <div className="feed-controls1">
           <input type="text" placeholder="Search..." className="feed-search" />
           
-          <select className="filter-dropdown">
+          <select className="filter-dropdown1">
             <option value="filter" style={{color:'black'}}>Filter</option>
             <option value="recent" style={{color:'black'}}>Most Recent</option>
             <option value="popular" style={{color:'black'}}>Most Popular</option>
@@ -236,25 +119,25 @@ const Faq = () => {
           <button className="add-question-btn" style={{height:'40px',fontSize:'10px'}}>Add Question</button>
         </div>
 
-        <div className="feed-content">
+        <div className="feed-content1">
       {data.map((item, index) => (
-        <div className="content-section" key={index}>
+        <div className="content-Section1" key={index}>
           {/* Top button group with space between two buttons */}
-          <div className="button-group top">
+          {/* <div className="button-group top">
             <button>Info</button>
-            <div style={{ flexGrow: 1 }}></div> {/* Spacer */}
+            <div style={{ flexGrow: 1 }}></div> 
             <button>Jamshedpur</button>
-          </div>
+          </div> */}
 
-          {/* Question and Answer Section */}
-          <div className="question-answer">
+          {/* Question and Answer Section1 */}
+          <div className="question-answer1">
             <div className="question">
               <strong>{item.question}</strong>
             </div>
 
-            <div className="answer">
+            <div className="add-answer1">
               {showFullAnswer[index] ? item.answer : `${item.answer.substring(0, 100)}...`}
-              <button className="read-more" onClick={() => toggleReadMore(index)}>
+              <button className="read-more1" onClick={() => toggleReadMore(index)}>
                 {showFullAnswer[index] ? 'Read Less' : 'Read More'}
               </button>
             </div>
@@ -264,7 +147,7 @@ const Faq = () => {
 
 
           {/* Like, Dislike, and Share icons */}
-          <div className="actions">
+          <div className="actions1">
             <button className="like-btn">👍 Like</button>
             <button className="dislike-btn">👎 Dislike</button>
             <button className="share-btn">🔗 Share</button>
@@ -274,8 +157,8 @@ const Faq = () => {
     </div>
       </div>
 
-      {/* Third Section: Div with image, heading, buttons, and Q&A */}
-      <div className="section third-section">
+      {/* Third Section1: Div with image, heading, buttons, and Q&A */}
+      <div className="Section1 third-Section1">
         {/* <div className="first-div">
           <div className="image-part">
             <img src="https://via.placeholder.com/100" alt="placeholder" />
@@ -290,8 +173,8 @@ const Faq = () => {
         </div> */}
 
 <div className="second-div">
-      <h2 className="title">Most Viewed Questions</h2>
-      <div className="qa-container">
+      <h2 className="title1">Most Viewed Questions</h2>
+      <div className="qa-container1">
         <div className="qa-part">
           {data.map((qa, index) => (
             <div className="qa-pair" key={index}>
@@ -299,7 +182,7 @@ const Faq = () => {
               <div className="answer">
                 {/* Show either truncated or full answer */}
                 {showFullAnswer[index] ? qa.answer : `${qa.answer.substring(0, 100)}...`}
-                <button className="read-more" onClick={() => toggleReadMore(index)}>
+                <button className="read-more1" onClick={() => toggleReadMore(index)}>
                   {showFullAnswer[index] ? 'Read Less' : 'Read More'}
                 </button>
               </div>

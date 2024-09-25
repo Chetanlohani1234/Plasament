@@ -38,7 +38,9 @@ const CollegePage = () => {
   ];
 
   return (
+    
     <div className="college-container">
+      <br/><br/><br/><br/>
      <a href='/university'>  
       <h1 className="page-title">Top Colleges</h1>
       <div className="college-grid">

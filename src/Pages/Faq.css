@@ -1,5 +1,6 @@
 /* General container for all sections */
-.container {
+.container1 {
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -8,7 +9,7 @@
 }
 
 /* Style for each section */
-.section {
+.section1 {
   background-color: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -17,25 +18,25 @@
 }
 
 /* Specific width for Section 1 */
-.qna-section {
+.qna-section1 {
   flex: 1; /* Takes 1 part of the available space */
   max-width: 300px; /* Optional: max width to limit size */
 }
 
 /* Wider Section 2 */
-.feed-section {
+.feed-section1 {
   flex: 2; /* Takes 2 parts of the available space */
   max-width: 800px; /* Optional: max width for control */
 }
 
 /* Specific width for Section 3 */
-.third-section {
+.third-section1 {
   flex: 1; /* Takes 1 part of the available space */
   max-width: 300px; /* Optional: max width to limit size */
 }
 
 /* Common styles for form inputs */
-input[type="text"] {
+.input1[type="text"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -44,25 +45,26 @@ input[type="text"] {
 }
 
 /* Checkbox Group */
-.checkbox-group {
+.checkbox-group1 {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
 }
 
-.checkbox-group label {
+.checkbox-group1 label {
   margin-left: 8px;
   font-size: 14px;
-}
+} 
+
 
 /* Feed Section Controls */
-.feed-controls {
+.feed-controls1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.feed-controls input {
+.feed-controls1 input {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
@@ -80,14 +82,14 @@ input[type="text"] {
 }
 
 /* Filter Dropdown */
-.filter-dropdown {
+.filter-dropdown1 {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
 }
 
 /* Feed Content */
-.feed-content .content-section {
+.feed-content1 .content-section1 {
   background-color: #fff;
   padding: 15px;
   margin-bottom: 20px;
@@ -96,12 +98,12 @@ input[type="text"] {
 }
 
 /* Question and Answer */
-.question-answer {
+.question-answer1 {
   margin-bottom: 15px;
 }
 
 /* Read More button */
-.read-more {
+.read-more1 {
   background-color: transparent;
   border: none;
   color: #00a7ac;
@@ -110,13 +112,13 @@ input[type="text"] {
 }
 
 /* Like, Dislike, Share Buttons */
-.actions {
+.actions1 {
   display: flex;
   justify-content: space-around;
   margin-top: 15px;
 }
 
-.actions button {
+.actions1 button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -124,15 +126,15 @@ input[type="text"] {
 }
 
 /* Add Answer Section */
-.add-answer {
+.add-answer1 {
   margin-top: 20px;
 }
 
-.add-answer input[type="text"] {
+.add-answer1 input[type="text"] {
   margin-bottom: 10px; /* Space between input and button */
 }
 
-.add-answer button {
+.add-answer1 button {
   background-color: #00a7ac;
   color: white;
   padding: 10px 15px;
@@ -142,32 +144,32 @@ input[type="text"] {
 }
 
 /* Third Section - Most Viewed Questions */
-.title {
+.title1 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.qa-container .qa-pair {
+.qa-container1 .qa-pair {
   margin-bottom: 10px;
 }
 
-.qa-container .question {
+.qa-container1 .question {
   font-weight: bold;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .container {
+  .container1 {
     flex-direction: column;
   }
 
-  .section {
+  .section1 {
     max-width: none;
     width: 100%;
     margin-bottom: 20px;
   }
 
-  .feed-controls {
+  .feed-controls1 {
     flex-direction: column;
   }
 }

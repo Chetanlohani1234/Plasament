@@ -51,7 +51,7 @@ const Form = () => {
             slidesPerView={4}
             loop={true}
             autoplay={{
-              delay: 1000, // Set a higher delay (3000ms = 3 seconds)
+              delay: 3000, // Set a higher delay (3000ms = 3 seconds)
               disableOnInteraction: false,
             }}
             modules={[Autoplay]}

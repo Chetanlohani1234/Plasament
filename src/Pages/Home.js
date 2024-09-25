@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'; // Import Swiper and SwiperSlide components
 import 'swiper/css'; // Import Swiper core and required modules' styles
 import 'swiper/css/navigation';
@@ -8,6 +8,92 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 
 const Home = () => {
+
+
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
+  // Show the modal when the component mounts
+  useEffect(() => {
+    // Disable scrolling when modal is open
+    if (isModalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      // Clean up: Enable scrolling when component unmounts
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen]);
+
+  const handleDownload = () => {
+    window.open("https://play.google.com/store/apps/details?id=com.isoftinc.pure_professional", "_blank");
+    //alert("Download started!");
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+ // CSS styles for the modal
+ const modalOverlayStyles1 = {
+  overflowX:'hidden',
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  width: '90%',
+  height: '100%',
+  backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent background
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  zIndex: 1000, // Ensure it’s on top
+};
+
+const modalContainerStyles1 = {
+  overflow: 'hidden',
+  backgroundColor: 'white',
+  borderRadius: '8px',
+  padding: '20px',
+  textAlign: 'center',
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+  maxWidth: '90%',
+  width: '400px', // Fixed width for larger screens
+  position: 'relative', // For responsive positioning
+};
+
+const headerStyles1 = {
+  fontSize: '24px',
+  fontWeight: 'bold',
+  marginBottom: '15px',
+};
+
+const downloadButtonStyles1 = {
+  backgroundColor: '#28a745',
+  color: 'white',
+  padding: '10px 20px',
+  border: 'none',
+  borderRadius: '5px',
+  cursor: 'pointer',
+  margin: '5px',
+  transition: 'background-color 0.3s, transform 0.3s',
+};
+
+const cancelButtonStyles1 = {
+  backgroundColor: '#dc3545',
+  color: 'white',
+  padding: '10px 20px',
+  border: 'none',
+  borderRadius: '5px',
+  cursor: 'pointer',
+  margin: '5px',
+  transition: 'background-color 0.3s, transform 0.3s',
+};
+
+
+
     const [isExpanded, setIsExpanded] = useState(false);
     const [activeFilter, setActiveFilter] = useState('all');
 
@@ -54,6 +140,43 @@ return (
     <section className="ed-2-banner bg-edoffwhite pt-[120px] pb-[190px] relative z-[1] overflow-hidden">
       <div className="container max-w-[71.6%] xxxl:max-w-[86.5%] xxl:max-w-[90.6%] mx-auto">
         <div className="flex md:flex-col gap-x-[112px] gap-y-[40px] items-center">
+                        
+            {/* Modal Popup */}
+            {isModalOpen && (
+            <div style={modalOverlayStyles1}>
+              <div style={modalContainerStyles1}>
+                <div style={headerStyles1}>Download Our App</div>
+                <button
+                  style={downloadButtonStyles1}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = "#218838";
+                    e.target.style.transform = "scale(1.05)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = "#28a745";
+                    e.target.style.transform = "scale(1)";
+                  }}
+                  onClick={handleDownload}
+                >
+                  Download
+                </button>
+                <button
+                  style={cancelButtonStyles1}
+                  onMouseEnter={(e) => {
+                    e.target.style.backgroundColor = "#c82333";
+                    e.target.style.transform = "scale(1.05)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.target.style.backgroundColor = "#dc3545";
+                    e.target.style.transform = "scale(1)";
+                  }}
+                  onClick={handleCancel}
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          )}
           {/* banner text */}
           <div className="max-w-[49%] xxxl:max-w-[45.5%] md:max-w-full shrink-0">
             <h6 className="ed-section-sub-title !text-black before:!content-none">
@@ -102,6 +225,7 @@ return (
                 className="rounded-[20px]"
               />
               {/* vectors */}
+
               <div>
                 <div className="w-[242px] aspect-square rounded-full bg-edpurple opacity-80 blur-[110px] absolute -z-[1] bottom-0 left-[163px]" />
                 <img
@@ -119,6 +243,7 @@ return (
           </div>
         </div>
       </div>
+
       {/* vector */}
       <div>
         <img
@@ -307,7 +432,7 @@ return (
         slidesPerView={4}
         loop={true}
         autoplay={{
-          delay: 300,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
@@ -1405,7 +1530,14 @@ return (
   <br/><br/>
 </>
 
+
+
   )
+
+
+
 }
+
+
 
 export default Home;
